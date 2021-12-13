@@ -18,21 +18,23 @@ const App = () => {
 				<Header />
 				<div className="landing">
 					<div className="text-and-buttons">
-						<h2>Create quick, easy, and beautiful polls.</h2>
-						<div className="vertical-divider"></div>
-						<Button
-							type="primary"
-							label="Add to Server"
-							href={INVITE_URL}
-							target="_blank"
-						/>
-						<div className="divider"></div>
-						<Button
-							type="secondary"
-							label="Support Server"
-							href={SUPPORT_SERVER}
-							target="_blank"
-						/>
+						<div>
+							<h2>Create quick, easy, and beautiful polls.</h2>
+							<div className="vertical-divider"></div>
+							<Button
+								type="primary"
+								label="Add to Server"
+								href={INVITE_URL}
+								target="_blank"
+							/>
+							<div className="divider"></div>
+							<Button
+								type="secondary"
+								label="Support Server"
+								href={SUPPORT_SERVER}
+								target="_blank"
+							/>
+						</div>
 					</div>
 					<div className="image-container">
 						<img

@@ -35,7 +35,7 @@
 .nav-links {
 	display: flex;
 	align-items: center;
-	
+
 	.divider {
 		width: 24px;
 		height: auto;
@@ -59,4 +59,8 @@
 	// padding: 10px 12px;
 	padding: 10px 8px;
 	text-decoration: none;
+
+	@media screen and (max-width: 1600px) {
+		display: none;
+	}
 }
