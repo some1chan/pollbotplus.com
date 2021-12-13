@@ -1,0 +1,38 @@
+@use "sass:color";
+
+.form-inline {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+.button {
+	transition: color 0.15s ease, background-color 0.15s ease;
+
+	color: #{$button-text-color};
+	background-color: transparent;
+
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+
+	border-radius: #{$rounded-corners};
+
+	&.primary {
+		padding: 15px 32px;
+		background-color: #{$primary-color};
+		&:hover {
+			background: color.scale($color: $primary-color, $lightness: -15%);
+		}
+	}
+
+	&.secondary {
+		padding: 15px 32px;
+		background-color: #{$secondary-color};
+		&:hover {
+			background: color.scale($color: $secondary-color, $lightness: -15%);
+		}
+	}
+}

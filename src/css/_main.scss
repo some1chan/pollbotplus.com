@@ -1,0 +1,21 @@
+@font-face {
+	font-family: "Readex Pro";
+	src: local("Readex Pro"),
+		url(../fonts/ReadexPro-Regular.ttf) format("truetype");
+}
+
+body {
+	margin: 0;
+	color: var(--text-color);
+}
+
+:root {
+	font-family: "Readex Pro";
+	font-size: 16px;
+}
+
+button {
+	font-family: "Readex Pro";
+	font-size: 16px;
+	cursor: pointer;
+}
