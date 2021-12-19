@@ -4,7 +4,7 @@ import classNames from "classnames";
 // https://www.freecodecamp.org/news/html-button-link-code-examples-how-to-make-html-hyperlinks-using-the-href-attribute-on-tags/
 
 const Button = (props: {
-	type: "primary" | "secondary";
+	type: "primary" | "secondary" | "outline";
 	label: string;
 	href?: string;
 	target?: React.HTMLAttributeAnchorTarget;
@@ -25,11 +25,22 @@ const Button = (props: {
 			</a>
 		);
 	} else {
-		return (
-			<button className={classNames("button", props.type)}>
-				{props.label}
-			</button>
-		);
+		if (props.onClick) {
+			return (
+				<button
+					className={classNames("button", props.type)}
+					onClick={props.onClick}
+				>
+					{props.label}
+				</button>
+			);
+		} else {
+			return (
+				<button className={classNames("button", props.type)}>
+					{props.label}
+				</button>
+			);
+		}
 	}
 };
 

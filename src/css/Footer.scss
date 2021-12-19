@@ -1,5 +1,5 @@
 footer {
-	background-color: #{$footer-background-color};
+	background-color: var(--secondary-background-color);
 	display: block;
 	padding: 21px 0;
 	text-align: center;

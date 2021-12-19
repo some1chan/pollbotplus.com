@@ -5,12 +5,39 @@
 	justify-content: center;
 	align-content: center;
 
+	@media screen and (max-width: 1110px) {
+		display: revert;
+		margin: 0 auto;
+	}
+
 	.text-and-buttons {
 		display: flex;
 		justify-content: center;
 		justify-items: center;
 		align-items: center;
-		flex-grow: 1;
+		// flex-grow: 1;
+
+		
+		@media screen and (max-width: 1110px) {
+			padding: 48px 0;
+		}
+
+	}
+
+	.buttons {
+		@media screen and (max-width: 1110px) {
+			text-align: center;
+			display: block;
+			justify-content: center;
+			justify-items: center;
+			justify-self: center;
+		}
+
+		.button {
+			@media screen and (max-width: 1110px) {
+				margin: 5px;
+			}
+		}
 	}
 
 	h2 {
@@ -22,6 +49,21 @@
 		@media screen and (max-width: 1631px) {
 			font-size: 62px;
 			width: 600px;
+		}
+
+		@media screen and (max-width: 1110px) {
+			// font-size: 69px;
+			// width: 686px;
+			font-size: clamp(40px, 3.5vw, 69px);
+			text-align: center;
+			width: auto;
+			justify-content: center;
+			justify-items: center;
+			justify-self: center;
+		}
+
+		body.dark & {
+			color: #dcddde;
 		}
 
 		// @media screen and (max-width: 1538px) {
@@ -39,6 +81,9 @@
 
 	.vertical-divider {
 		padding-bottom: 32px;
+		@media screen and (max-width: 1110px) {
+			padding-bottom: 16px;
+		}
 	}
 
 	.divider {
@@ -49,7 +94,13 @@
 
 	.image-container {
 		padding: 0 0 0 48px;
-		flex-shrink: 1;
+		// flex-shrink: 1;
+
+		@media screen and (max-width: 1110px) {
+			display: flex;
+			justify-content: center;
+			padding: 48px 0 96px 0;
+		}
 	}
 
 	.image {
@@ -66,6 +117,20 @@
 		@media screen and (max-width: 1631px) {
 			width: 376px;
 			height: auto;
+		}
+	}
+
+	.dark-image {
+		display: none;
+		body.dark & {
+			display: inherit;
+		}
+	}
+
+	.light-image {
+		display: inherit;
+		body.dark & {
+			display: none;
 		}
 	}
 }

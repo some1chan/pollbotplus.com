@@ -5,7 +5,10 @@
 }
 
 body {
+	// transition: color 0.15s ease, background-color 0.15s ease,
+	// 	outline-color 0.15s ease, opacity 0.15s ease;
 	margin: 0;
+	background-color: var(--background-color);
 	color: var(--text-color);
 }
 

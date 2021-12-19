@@ -1,14 +1,25 @@
 :root {
+	--background-color: #fff;
+	--secondary-background-color: #efefef;
 	--text-color: #1a1a1a;
 	--link-color: #{$link-color};
 	--button-text-color: #{$button-text-color};
-	--text-secondary: #{$text-secondary};
+	--text-secondary: #999;
+	--primary-color: #1abc9c;
+	--primary-color-darker: #14937a;
+	--secondary-color: #999;
+	--secondary-color-lighter: #828282;
 }
 
 .dark {
+	--background-color: #080709;
+	--secondary-background-color: hsl(270, 4%, 7%);
 	--text-color: #f8f8f8;
 	--link-color: #{$link-color};
 	--button-text-color: #{$button-text-color};
-	--text-secondary: #{$text-secondary};
+	--text-secondary: #ccc;
+	--primary-color: #14937a;
+	--primary-color-darker: hsl(168, 76%, 23%);
+	--secondary-color: hsl(200, 6%, 15%);
+	--secondary-color-lighter: hsl(200, 6%, 25%);
 }
-
