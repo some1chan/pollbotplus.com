@@ -1,7 +1,6 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"types": ["@honkhonk/vite-plugin-svgr/client"],
 		"useDefineForClassFields": true,
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
 		"allowJs": false,

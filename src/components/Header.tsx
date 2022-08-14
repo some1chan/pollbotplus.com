@@ -1,69 +1,96 @@
-import React from "react";
-
-import Button from "./Button";
+// import Button from "./Button";
 import Logo from "../svg/PollBotPlus-min.svg";
-import Sun from "../svg/Icon feather-sun.svg";
-import Moon from "../svg/Icon feather-moon.svg";
+import Sun from "./svg/Sun";
+import Moon from "./svg/Moon";
+import { Link } from "react-router-dom";
 
-const Header = () => {
-	const [darkMode, setDarkMode] = React.useState(false);
+const Header = (props: { selected?: "home" | "pricing" }) => {
+	function toggleDarkMode() {
+		const browserDefaultDark = window.matchMedia(
+			"(prefers-color-scheme: dark)"
+		).matches;
+		const localStorageDark = localStorage.getItem("dark");
+		const defaultsToDark = localStorageDark
+			? localStorageDark == "t"
+			: browserDefaultDark;
+		const isCurrentlyDarkMode =
+			document.documentElement.classList.contains("dark");
 
-	React.useEffect(() => {
-		if (darkMode) {
-			document.body.classList.add("dark");
+		if (isCurrentlyDarkMode) {
+			if (defaultsToDark) {
+				console.log("Turned to light/default mode");
+				localStorage.removeItem("dark");
+			} else {
+				console.log("Turned to light mode");
+				localStorage.setItem("dark", "f");
+			}
+			document.documentElement.classList.remove("dark");
 		} else {
-			document.body.classList.remove("dark");
+			if (defaultsToDark) {
+				console.log("Turned to dark/default mode");
+				localStorage.removeItem("dark");
+			} else {
+				localStorage.setItem("dark", "t");
+				console.log("Turned to dark mode");
+			}
+			document.documentElement.classList.add("dark");
 		}
-	}, [darkMode]);
+	}
 
 	return (
-		<header>
-			<div className="navbar">
-				<a href="#" style={{ alignItems: "center", display: "flex" }}>
-					<img src={Logo} className="logo" alt="Logo" />
-					{/* <Logo className="logo" /> */}
-					<h1>PollBotPlus</h1>
-				</a>
-				<div className="nav-links">
-					<li className="nav-item">
-						<a href="#">Home</a>
-					</li>
-					<li className="nav-item">
-						<a href="#">Features</a>
-					</li>
-					<li className="nav-item">
-						<a href="#">Getting Started</a>
-					</li>
-					<li className="nav-item">
-						<a href="#">FAQ</a>
-					</li>
-					<li className="nav-item">
-						<a href="#">Premium</a>
-					</li>
-					<button
-						className="button"
-						onClick={() => setDarkMode(!darkMode)}
-					>
-						<div className="center">
-							<img
-								src={Sun}
-								width="32px"
-								height="33px"
-								className="light-dark-toggle hide-on-dark"
-								alt="Toggle Light Mode"
-							/>
-							<img
-								src={Moon}
-								width="32px"
-								height="33px"
-								className="light-dark-toggle hide-on-light"
-								alt="Toggle Dark Mode"
-								aria-label="Toggle Dark Mode"
-							/>
-						</div>
-					</button>
-					<div className="divider"></div>
-					<Button type="secondary" label="Dashboard" />
+		<header className="bg-wrapper">
+			<div className="width-wrapper p-wrapper">
+				<div className="nav-bar">
+					<Link to="/" className="nav-element logo">
+						<img
+							src={Logo}
+							className="logo"
+							alt="Logo"
+							width="2rem"
+							height="2rem"
+						/>
+						<h1>PollBotPlus</h1>
+					</Link>
+					<ul className="nav-element nav-links mid">
+						<li className="nav-item">
+							<Link
+								to="/"
+								className={
+									props.selected == "home" ? "selected" : ""
+								}
+							>
+								Home
+							</Link>
+						</li>
+						{/* <li className="nav-item">
+								<a href="#">Docs</a>
+							</li> */}
+						<li className="nav-item">
+							<a
+								className={
+									props.selected == "pricing"
+										? "selected"
+										: ""
+								}
+								href="#"
+							>
+								Pricing
+							</a>
+						</li>
+						<li className="nav-item">
+							<a href="https://dsc.gg/pollbotplus-support">
+								Support Server
+							</a>
+						</li>
+					</ul>
+					<div className="nav-links">
+						<button className="button" onClick={toggleDarkMode}>
+							<Sun />
+							<Moon />
+						</button>
+						{/* <div className="divider" />
+							<Button type="secondary" label="Dashboard" /> */}
+					</div>
 				</div>
 			</div>
 		</header>

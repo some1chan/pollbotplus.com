@@ -7,22 +7,21 @@
 }
 
 .button {
-	transition: color 0.15s ease, background-color 0.15s ease;
+	// transition: color 0.15s ease, background-color 0.15s ease;
 
 	color: #{$button-text-color};
 	background-color: transparent;
 
 	border: none;
+	border-radius: #{$rounded-corners};
+	display: inline-block;
+	font-family: Readex Pro, Inter;
+	font-size: 0.875rem;
+	padding: 0.75rem 3.25rem;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-
-	border-radius: #{$rounded-corners};
 
 	&.primary {
-		padding: 15px 32px;
-		// padding: 13px 30px;
 		background: var(--primary-color);
 		// outline: 1px solid #{$primary-color};
 
@@ -33,22 +32,18 @@
 	}
 
 	&.secondary {
-		padding: 15px 32px;
-		// padding: 13px 30px;
-		background-color: var(--secondary-color);
+		background-color: var(--secondary-button-color);
 
 		&:hover {
-			background: var(--secondary-color-lighter);
+			background: var(--secondary-button-color-lighter);
 			// outline: 0px solid transparent;
 		}
 	}
 
 	&.outline {
-		padding: 15px 32px;
-		// padding: 13px 30px;
 		background: transparent;
 		color: var(--text-secondary);
-		outline: 2px solid var(--text-secondary);
+		outline: 1px solid var(--text-secondary);
 
 		&:hover {
 			color: #fff;

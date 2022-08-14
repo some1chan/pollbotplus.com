@@ -1,0 +1,262 @@
+.bg-wrapper-landing {
+	background-image: url("../img/abstract-light.png");
+	background-size: cover;
+}
+
+.top-landing {
+	padding: 4rem 0 8rem 0;
+	// display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	min-height: 10rem;
+
+	// @media screen and (max-width: 1110px) {
+	// 	display: revert;
+	// 	margin: 0 auto;
+	// }
+
+	.text-and-buttons {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		// flex-grow: 1;
+
+		p {
+			max-width: 30rem;
+			color: var(--text-color);
+		}
+
+		@media screen and (max-width: 1110px) {
+			padding: 4rem 0;
+		}
+	}
+
+	.buttons {
+		margin: 1.75rem;
+		font-size: 1em;
+
+		@media screen and (max-width: 1110px) {
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			justify-items: center;
+			justify-self: center;
+		}
+
+		// Aligned for buttons to not overflow
+		@media screen and (max-width: 525px) {
+			margin: 0;
+			flex-direction: column;
+
+			.button {
+				max-width: 2rem;
+			}
+		}
+
+		// .button {
+		// 	@media screen and (max-width: 1110px) {
+		// 		margin: 5px;
+		// 		padding: .75rem 5rem;
+		// 	}
+		// }
+	}
+
+	h2 {
+		letter-spacing: -0.15rem;
+		font-size: 3.75rem;
+		font-weight: bold;
+		text-align: center;
+		margin: 0;
+
+		// iOS device
+		@media screen and (max-width: 428px) {
+			font-size: 2.75rem;
+		}
+
+		// iOS device
+		@media screen and (max-width: 375px) {
+			font-size: 2.65rem;
+		}
+
+		// @media screen and (max-width: 1631px) {
+		// 	font-size: 62px;
+		// 	width: 600px;
+		// }
+
+		// @media screen and (max-width: 1110px) {
+		// 	// font-size: 69px;
+		// 	// width: 686px;
+		// 	font-size: clamp(40px, 3.5vw, 69px);
+		// 	text-align: center;
+		// 	width: auto;
+		// 	justify-content: center;
+		// 	justify-items: center;
+		// 	justify-self: center;
+		// }
+
+		// @media screen and (max-width: 1538px) {
+		// 	font-size: 62px;
+		// }
+
+		// @media screen and (max-width: 1508px) {
+		// 	font-size: 60px;
+		// }
+
+		// @media screen and (max-width: 1490px) {
+		// 	font-size: 58px;
+		// }
+	}
+
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+	}
+
+	.vertical-divider {
+		padding-bottom: 32px;
+		@media screen and (max-width: 1110px) {
+			padding-bottom: 16px;
+		}
+	}
+
+	.divider {
+		width: 1rem;
+		height: auto;
+		display: inline-block;
+
+		@media screen and (max-width: 525px) {
+			height: 0.5rem;
+			flex-direction: column;
+		}
+	}
+}
+
+.poll-gallery {
+	display: grid;
+
+	.image-container {
+		justify-self: center;
+
+		// padding: 0 0 0 48px;
+		// flex-shrink: 1;
+
+		// @media screen and (max-width: 1110px) {
+		// 	display: flex;
+		// 	justify-content: center;
+		// 	padding: 48px 0 96px 0;
+		// }
+
+		// display: none;
+	}
+
+	.image {
+		padding: 5rem;
+		// width: 462px;
+		// height: auto;
+		height: auto;
+		// width: 100%;
+
+		// @media screen and (max-width: 1725px) {
+		// 	width: 406px;
+		// 	height: auto;
+		// }
+
+		@media screen and (max-width: 1631px) {
+			width: 376px;
+			height: auto;
+		}
+	}
+
+	.dark-image {
+		display: none;
+		:global(html.dark) & {
+			display: inherit;
+		}
+	}
+
+	.light-image {
+		display: inherit;
+		:global(html.dark) & {
+			display: none;
+		}
+	}
+}
+
+.trusted-banner {
+	background: var(--secondary-background-color);
+
+	a {
+		display: inline-flex;
+
+		img {
+			width: 64px;
+			height: 64px;
+
+			@media screen and (max-width: 1110px) {
+				width: 48px;
+				height: 48px;
+			}
+		}
+	}
+
+	.items {
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 1110px) {
+			flex-direction: column;
+
+			.p2-wrapper {
+				padding-inline: 0;
+			}
+		}
+	}
+
+	h2 {
+		font-weight: bold;
+		font-size: 32px;
+		margin: 0;
+		padding: 3rem 0;
+		// margin: 1rem;
+
+		@media screen and (max-width: 1110px) {
+			padding: 2rem 0 0 0;
+		}
+	}
+
+	ul {
+		display: flex;
+		margin-left: auto;
+		list-style-type: none;
+
+		@media screen and (max-width: 1110px) {
+			margin: 0;
+			padding: 1rem 0 2rem 0;
+		}
+
+		li {
+			padding-left: 1.5rem;
+
+			@media screen and (max-width: 1110px) {
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;
+			}
+		}
+	}
+
+	li {
+		align-self: center;
+		line-height: 0;
+	}
+}
+
+.elegance {
+	h2 {
+		font-size: 3.5rem;
+	}
+}

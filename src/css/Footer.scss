@@ -1,17 +1,107 @@
-footer {
-	background-color: var(--secondary-background-color);
-	display: block;
-	padding: 21px 0;
-	text-align: center;
-
-	// position: absolute;
-	// bottom: 0;
-	// left: 0;
-	// width: 100%;
+html.dark footer {
+	--secondary-color: hsl(200, 6%, 22.5%);
+	--secondary-color-darker: hsl(200, 6%, 35%);
 }
 
-.footer-element {
-	display: inline-block;
-	padding: 16px;
-	margin: 4px;
+footer {
+	background-color: var(--secondary-background-color);
+	color: var(--secondary-color);
+
+	display: flex;
+	font-size: 0.875rem;
+	font-family: Readex Pro, Inter;
+
+	margin-top: auto;
+	padding: 2.25rem 0;
+
+	p {
+		margin: 0.25rem 0;
+		color: var(--secondary-color);
+	}
+
+	.logo.button {
+		margin: 0;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		color: var(--secondary-color);
+		cursor: pointer;
+
+		&.hide {
+			display: none;
+		}
+
+		&:hover {
+			color: var(--secondary-color-darker);
+			// outline: 0px solid transparent;
+		}
+	}
+
+	.footer-elements {
+		text-decoration: none;
+		list-style-type: none;
+
+		display: flex;
+		align-self: center;
+
+		a {
+			margin: 0 1rem 0 0;
+			color: var(--secondary-color);
+
+			&:hover {
+				color: var(--secondary-color-darker);
+			}
+		}
+	}
+
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+	// Based on https://codepen.io/elliotdahl/pen/ygYrvm
+	.icon {
+		display: inline-flex;
+		font-size: 2em;
+
+		svg,
+		img {
+			height: 1.5rem;
+			width: 1.5rem;
+		}
+	}
+
+	.icon.baseline svg,
+	.icon img {
+		top: 0.125em;
+		position: relative;
+		// fill: currentColor;
+		fill: var(--secondary-color);
+	}
+	.icon.baseline svg:hover,
+	.icon img:hover {
+		fill: var(--secondary-color-darker);
+	}
+
+	.icon.baseline a {
+		margin: 0 0 0 0.5em;
+
+		@media screen and (max-width: 428px) {
+			margin: 0 0.5em 0 0;
+		}
+	}
+
+	.social-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.social-icon-group {
+		grid-column: 2;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		@media screen and (max-width: 428px) {
+			padding-top: 1rem;
+			grid-column: 1;
+			justify-content: flex-start;
+		}
+	}
 }
