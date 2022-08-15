@@ -22,7 +22,7 @@ If you have any questions or suggestions about these terms, do not hesitate to j
 
 const TermsOfService = () => {
 	return (
-		<div className="width-wrapper p-wrapper">
+		<div className="width-wrapper p-wrapper p2-wrapper">
 			<ReactMarkdown children={markdown} />
 			<br />
 			<br />
