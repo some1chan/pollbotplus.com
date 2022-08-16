@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
+
 import Discord from "./svg/Discord";
 import Twitter from "./svg/Twitter";
-// import Logo from "../svg/PollBotPlus-min.svg";
 
 const Footer = (props: { selected?: "home" }) => {
 	const scrollToTop = () => {
@@ -20,35 +20,20 @@ const Footer = (props: { selected?: "home" }) => {
 			>
 				<div style={{ gridColumn: 1 }}>
 					<div
-						id="a"
-						className={
-							props.selected ? "logo button" : "logo button hide"
-						}
+						className={props.selected ? "button" : "button hide"}
 						onClick={() => scrollToTop()}
 					>
-						{/* <img
-							src={Logo}
-							className="logo"
-							alt="Logo"
-							width="2rem"
-							height="2rem"
-						/> */}
-						<h2 className="logo">PollBotPlus</h2>
+						<h2 className="">PollBotPlus</h2>
 					</div>
-					<Link
-						to="/"
-						className={
-							props.selected ? "logo button hide" : "logo button"
-						}
-					>
-						{/* <img
-							src={Logo}
-							className="logo"
-							alt="Logo"
-							width="2rem"
-							height="2rem"
-						/> */}
-						<h2 className="logo">PollBotPlus</h2>
+					<Link href="/">
+						<h2
+							className={
+								props.selected ? "button hide" : "button"
+							}
+							tabIndex={0}
+						>
+							PollBotPlus
+						</h2>
 					</Link>
 
 					<p>
@@ -56,8 +41,8 @@ const Footer = (props: { selected?: "home" }) => {
 						Reserved.
 					</p>
 					<div className="footer-elements">
-						<Link to="/privacy">Privacy Policy</Link>
-						<Link to="/terms">Terms of Service</Link>
+						<Link href="/privacy">Privacy Policy</Link>
+						<Link href="/terms">Terms of Service</Link>
 					</div>
 				</div>
 				<div className="social-icon-group">

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import classNames from "classnames";
 
 // https://www.freecodecamp.org/news/html-button-link-code-examples-how-to-make-html-hyperlinks-using-the-href-attribute-on-tags/

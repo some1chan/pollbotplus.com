@@ -1,10 +1,12 @@
+import Link from "next/link";
+import Image from "next/image";
+
 // import Button from "./Button";
-import Logo from "../svg/PollBotPlus-min.svg";
+import Logo from "../public/favicon.svg";
 import Sun from "./svg/Sun";
 import Moon from "./svg/Moon";
-import { Link } from "react-router-dom";
 
-const Header = (props: { selected?: "home" | "pricing" }) => {
+export default function Header(props: { selected?: "home" | "pricing" }) {
 	function toggleDarkMode() {
 		const browserDefaultDark = window.matchMedia(
 			"(prefers-color-scheme: dark)"
@@ -41,25 +43,34 @@ const Header = (props: { selected?: "home" | "pricing" }) => {
 		<header className="bg-wrapper">
 			<div className="width-wrapper p-wrapper">
 				<div className="nav-bar">
-					<Link to="/" className="nav-element logo">
-						<img
-							src={Logo}
-							className="logo"
-							alt="Logo"
-							width="2rem"
-							height="2rem"
-						/>
-						<h1>PollBotPlus</h1>
-					</Link>
-					<ul className="nav-element nav-links mid">
+					<div style={{ display: "flex", alignItems: "center" }}>
+						<Link href="/">
+							<div className="branding" tabIndex={0}>
+								<Image
+									src={Logo}
+									alt="Logo"
+									width={32}
+									height={32}
+									priority
+								/>
+							</div>
+						</Link>
+						<Link href="/">
+							<h1>PollBotPlus</h1>
+						</Link>
+					</div>
+					<ul className="nav-links mid">
 						<li className="nav-item">
-							<Link
-								to="/"
-								className={
-									props.selected == "home" ? "selected" : ""
-								}
-							>
-								Home
+							<Link href="/">
+								<a
+									className={
+										props.selected == "home"
+											? "selected"
+											: ""
+									}
+								>
+									Home
+								</a>
 							</Link>
 						</li>
 						{/* <li className="nav-item">
@@ -72,7 +83,7 @@ const Header = (props: { selected?: "home" | "pricing" }) => {
 										? "selected"
 										: ""
 								}
-								href="#"
+								href=""
 							>
 								Pricing
 							</a>
@@ -95,6 +106,4 @@ const Header = (props: { selected?: "home" | "pricing" }) => {
 			</div>
 		</header>
 	);
-};
-
-export default Header;
+}

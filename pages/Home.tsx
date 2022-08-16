@@ -1,13 +1,16 @@
+import Image from "next/image";
+
 import Button from "../components/Button";
 import Header from "../components/Header";
-import Landing from "../css/Landing.module.scss";
+import Footer from "../components/Footer";
+import Landing from "../styles/Landing.module.scss";
 
-import AnimesRealImg from "../img/PBP AnimesRealSlashCommand.png";
-import AnimesRealDarkImg from "../img/PBP AnimesRealSlashCommand Dark.png";
-import GuildIcon1 from "../img/guild-icons/guildicon1.png";
-import GuildIcon2 from "../img/guild-icons/guildicon2.png";
-import GuildIcon3 from "../img/guild-icons/guildicon3.png";
-import GuildIcon4 from "../img/guild-icons/guildicon4.png";
+import AnimesRealImg from "../public/PBP AnimesRealSlashCommand.png";
+import AnimesRealDarkImg from "../public/PBP AnimesRealSlashCommand Dark.png";
+import GuildIcon1 from "../public/guild-icons/guildicon1.png";
+import GuildIcon2 from "../public/guild-icons/guildicon2.png";
+import GuildIcon3 from "../public/guild-icons/guildicon3.png";
+import GuildIcon4 from "../public/guild-icons/guildicon4.png";
 
 const Home = () => {
 	const INVITE_URL =
@@ -53,26 +56,31 @@ const Home = () => {
 				className={Landing["poll-gallery"] + " width-wrapper p-wrapper"}
 				style={{ textAlign: "center" }}
 			>
-				{/* <h2>Lorem Ipsum</h2> */}
 				<div className={Landing["image-container"]}>
-					<img
-						src={AnimesRealImg}
-						alt="A poll made by a user"
+					<div
 						className={`${Landing["image"]} ${Landing["light-image"]}`}
-						width="445"
-						height="452"
-					></img>
-					<img
-						src={AnimesRealDarkImg}
-						alt="A poll made by a user"
+					>
+						<Image
+							src={AnimesRealImg}
+							alt="A poll made by a user"
+							width="445"
+							height="452"
+						/>
+					</div>
+					<div
 						className={`${Landing["image"]} ${Landing["dark-image"]}`}
-						width="445"
-						height="452"
-					></img>
+					>
+						<Image
+							src={AnimesRealDarkImg}
+							alt="A poll made by a user"
+							width="445"
+							height="452"
+						/>
+					</div>
 				</div>
 			</div>
 
-			{/* <div className={Landing["trusted-banner"]}>
+			<div className={Landing["trusted-banner"]}>
 				<div
 					className={`${Landing["items"]} width-wrapper p-wrapper p2-wrapper`}
 				>
@@ -82,18 +90,18 @@ const Home = () => {
 							<a
 								href="https://discord.gg/battlezone"
 								target="_blank"
-								rel="noopener"
+								rel="noopener noreferrer"
 							>
-								<img src={GuildIcon1} alt="BattleZone.gg" />
+								<Image src={GuildIcon1} alt="BattleZone.gg" />
 							</a>
 						</li>
 						<li>
 							<a
 								href="https://discord.gg/cYMGA77"
 								target="_blank"
-								rel="noopener"
+								rel="noopener noreferrer"
 							>
-								<img
+								<Image
 									src={GuildIcon2}
 									alt="Game Dev Underground"
 								/>
@@ -103,18 +111,18 @@ const Home = () => {
 							<a
 								href="https://discord.gg/XGtzRJCsBY"
 								target="_blank"
-								rel="noopener"
+								rel="noopener noreferrer"
 							>
-								<img src={GuildIcon3} alt="Karuta's Kit" />
+								<Image src={GuildIcon3} alt="Karuta's Kit" />
 							</a>
 						</li>
 						<li>
 							<a
 								href="https://discord.gg/XEFmHcjppy"
 								target="_blank"
-								rel="noopener"
+								rel="noopener noreferrer"
 							>
-								<img
+								<Image
 									src={GuildIcon4}
 									alt="Seasalt's Karuta Shore"
 								/>
@@ -132,7 +140,8 @@ const Home = () => {
 					Using PollBotPlus’s powerful command system, users can
 					design polls to their liking.
 				</p>
-			</div> */}
+			</div>
+			<Footer selected="home" />
 		</div>
 	);
 };

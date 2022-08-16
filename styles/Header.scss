@@ -42,12 +42,22 @@
 		font-family: Readex Pro, Inter;
 		font-weight: normal;
 		letter-spacing: revert;
-		margin: 0;
+		margin: 0 -1rem 0 1rem;
 		color: var(--text-color);
+		width: 0;
+		cursor: pointer;
 
 		@media screen and (max-width: 770px) {
 			display: none;
 		}
+	}
+
+	.branding {
+		display: flex;
+		cursor: pointer;
+		padding: 8px 0;
+		border: none;
+		border-radius: 0.375rem;
 	}
 }
 
@@ -102,9 +112,9 @@
 
 .nav-item a {
 	color: var(--text-color);
-	margin: 0 .75rem;
+	margin: 0 0.75rem;
 	display: inline-block;
-	padding: 10px .5rem;
+	padding: 10px 0.5rem;
 	text-decoration: none;
 	border-radius: #{$rounded-corners};
 

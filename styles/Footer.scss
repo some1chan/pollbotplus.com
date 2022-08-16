@@ -10,16 +10,22 @@ footer {
 	display: flex;
 	font-size: 0.875rem;
 	font-family: Readex Pro, Inter;
-
+	
 	margin-top: auto;
 	padding: 2.25rem 0;
+	
+	h2 {
+		font-weight: normal;
+		margin: 0;
+		margin-right: 1rem;
+	}
 
 	p {
 		margin: 0.25rem 0;
 		color: var(--secondary-color);
 	}
 
-	.logo.button {
+	.button {
 		margin: 0;
 		padding: 0;
 		border: none;
@@ -61,21 +67,21 @@ footer {
 		font-size: 2em;
 
 		svg,
-		img {
+		Image {
 			height: 1.5rem;
 			width: 1.5rem;
 		}
 	}
 
 	.icon.baseline svg,
-	.icon img {
+	.icon Image {
 		top: 0.125em;
 		position: relative;
 		// fill: currentColor;
 		fill: var(--secondary-color);
 	}
 	.icon.baseline svg:hover,
-	.icon img:hover {
+	.icon Image:hover {
 		fill: var(--secondary-color-darker);
 	}
 
