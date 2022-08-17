@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import ScrollToTop from "../components/ScrollToTop";
-import Home from "./Home";
+import Home from "./home";
 
-export default function () {
+export default function Index() {
 	useEffect(() => {
 		const browserDefaultDark = window.matchMedia(
 			"(prefers-color-scheme: dark)"
