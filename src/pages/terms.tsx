@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-
+import * as React from "react"
 const markdown = `
 # Terms of Service
 

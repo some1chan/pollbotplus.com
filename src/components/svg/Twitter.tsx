@@ -1,3 +1,4 @@
+import * as React from "react"
 // https://svgporn.com/#search=Twitter
 // https://www.svgminify.com/
 const Twitter = () => {

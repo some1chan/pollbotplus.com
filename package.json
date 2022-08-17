@@ -4,7 +4,7 @@
   "description": "The PollBotPlus website.",
   "private": true,
   "scripts": {
-    "dev": "gatsby develop",
+    "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -18,21 +18,22 @@
     "classnames": "^2.3.1",
     "gatsby": "^4.21.0",
     "gatsby-plugin-image": "^2.21.0",
+    "gatsby-plugin-manifest": "^4.21.0",
     "gatsby-plugin-mdx": "^4.0.0",
     "gatsby-plugin-sass": "^5.21.0",
     "gatsby-plugin-sharp": "^4.21.0",
     "gatsby-plugin-sitemap": "^5.21.0",
     "gatsby-source-filesystem": "^4.21.0",
     "gatsby-transformer-sharp": "^4.21.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-markdown": "^8.0.3"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-markdown": "^8.0.3",
+    "sass": "^1.54.4"
   },
   "devDependencies": {
-    "@types/node": "^18.7.3",
+    "@types/node": "^17.0.45",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "sass": "^1.54.4",
     "typescript": "^4.7.4"
   }
 }

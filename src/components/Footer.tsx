@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import Discord from "./svg/Discord";
 import Twitter from "./svg/Twitter";
-
+import * as React from "react"
 const Footer = (props: { selected?: "home" }) => {
 	const scrollToTop = () => {
 		console.log("Scroll to top");

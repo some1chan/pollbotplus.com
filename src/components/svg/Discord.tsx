@@ -1,3 +1,4 @@
+import * as React from "react"
 // https://svgporn.com/#search=Discord
 // https://www.svgminify.com/
 const Discord = () => {

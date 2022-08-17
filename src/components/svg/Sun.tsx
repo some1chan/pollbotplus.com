@@ -1,3 +1,4 @@
+import * as React from "react"
 // https://feathericons.com/?query=sun
 // https://www.svgminify.com/
 const Sun = () => {

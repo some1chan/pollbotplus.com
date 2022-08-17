@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
-
+import * as React from "react"
+import Layout from "../components/Layout";
 const markdown = `
 # Privacy Policy
 
@@ -67,11 +68,14 @@ If you have any questions or suggestions about the privacy policy, do not hesita
 
 const PrivacyPolicy = () => {
 	return (
-		<div className="width-wrapper p-wrapper p2-wrapper">
-			<ReactMarkdown children={markdown} />
-			<br />
-			<br />
-		</div>
+		<Layout>
+			<div className="width-wrapper p-wrapper p2-wrapper">
+				<ReactMarkdown children={markdown} />
+				<br />
+				<br />
+			</div>
+		</Layout>
+
 	);
 };
 
