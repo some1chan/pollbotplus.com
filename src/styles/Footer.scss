@@ -67,21 +67,21 @@ footer {
 		font-size: 2em;
 
 		svg,
-		Image {
+		image {
 			height: 1.5rem;
 			width: 1.5rem;
 		}
 	}
 
 	.icon.baseline svg,
-	.icon Image {
+	.icon image {
 		top: 0.125em;
 		position: relative;
 		// fill: currentColor;
 		fill: var(--secondary-color);
 	}
 	.icon.baseline svg:hover,
-	.icon Image:hover {
+	.icon image:hover {
 		fill: var(--secondary-color-darker);
 	}
 

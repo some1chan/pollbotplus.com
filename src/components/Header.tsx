@@ -1,8 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image";
 
 // import Button from "./Button";
-import Logo from "../public/favicon.svg";
 import Sun from "./svg/Sun";
 import Moon from "./svg/Moon";
 
@@ -44,24 +43,23 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 			<div className="width-wrapper p-wrapper">
 				<div className="nav-bar">
 					<div style={{ display: "flex", alignItems: "center" }}>
-						<Link href="/">
+						<Link to="/">
 							<div className="branding" tabIndex={0}>
-								<Image
-									src={Logo}
+								<StaticImage
+									src={"../images/favicon.svg"}
 									alt="Logo"
 									width={32}
 									height={32}
-									priority
 								/>
 							</div>
 						</Link>
-						<Link href="/">
+						<Link to="/">
 							<h1>PollBotPlus</h1>
 						</Link>
 					</div>
 					<ul className="nav-links mid">
 						<li className="nav-item">
-							<Link href="/">
+							<Link to="/">
 								<a
 									className={
 										props.selected == "home"

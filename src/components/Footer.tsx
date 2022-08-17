@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { Link } from "gatsby"
 import Discord from "./svg/Discord";
 import Twitter from "./svg/Twitter";
 
@@ -25,7 +24,7 @@ const Footer = (props: { selected?: "home" }) => {
 					>
 						<h2 className="">PollBotPlus</h2>
 					</div>
-					<Link href="/">
+					<Link to="/">
 						<h2
 							className={
 								props.selected ? "button hide" : "button"
@@ -41,8 +40,8 @@ const Footer = (props: { selected?: "home" }) => {
 						Reserved.
 					</p>
 					<div className="footer-elements">
-						<Link href="/privacy">Privacy Policy</Link>
-						<Link href="/terms">Terms of Service</Link>
+						<Link to="/privacy">Privacy Policy</Link>
+						<Link to="/terms">Terms of Service</Link>
 					</div>
 				</div>
 				<div className="social-icon-group">

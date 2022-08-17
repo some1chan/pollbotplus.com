@@ -1,16 +1,9 @@
-import Image from "next/image";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Button from "../components/Button";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Landing from "../styles/Landing.module.scss";
-
-import AnimesRealImg from "../public/PBP AnimesRealSlashCommand.png";
-import AnimesRealDarkImg from "../public/PBP AnimesRealSlashCommand Dark.png";
-import GuildIcon1 from "../public/guild-icons/guildicon1.png";
-import GuildIcon2 from "../public/guild-icons/guildicon2.png";
-import GuildIcon3 from "../public/guild-icons/guildicon3.png";
-import GuildIcon4 from "../public/guild-icons/guildicon4.png";
+import * as Landing from "../styles/Landing.module.scss";
 
 const Home = () => {
 	const INVITE_URL =
@@ -60,21 +53,21 @@ const Home = () => {
 					<div
 						className={`${Landing["image"]} ${Landing["light-image"]}`}
 					>
-						<Image
-							src={AnimesRealImg}
+						<StaticImage
+							src={"../images/PBP AnimesRealSlashCommand.png"}
 							alt="A poll made by a user"
-							width="445"
-							height="452"
+							width={445}
+							height={452}
 						/>
 					</div>
 					<div
 						className={`${Landing["image"]} ${Landing["dark-image"]}`}
 					>
-						<Image
-							src={AnimesRealDarkImg}
+						<StaticImage
+							src={"../images/PBP AnimesRealSlashCommand Dark.png"}
 							alt="A poll made by a user"
-							width="445"
-							height="452"
+							width={445}
+							height={452}
 						/>
 					</div>
 				</div>
@@ -92,7 +85,10 @@ const Home = () => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Image src={GuildIcon1} alt="BattleZone.gg" />
+								<StaticImage
+									src={"../images/guild-icons/guildicon1.png"}
+									alt="BattleZone.gg"
+								/>
 							</a>
 						</li>
 						<li>
@@ -101,8 +97,8 @@ const Home = () => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Image
-									src={GuildIcon2}
+								<StaticImage
+									src={"../images/guild-icons/guildicon2.png"}
 									alt="Game Dev Underground"
 								/>
 							</a>
@@ -113,7 +109,10 @@ const Home = () => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Image src={GuildIcon3} alt="Karuta's Kit" />
+								<StaticImage
+									src={"../images/guild-icons/guildicon3.png"}
+									alt="Karuta's Kit"
+								/>
 							</a>
 						</li>
 						<li>
@@ -122,8 +121,8 @@ const Home = () => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Image
-									src={GuildIcon4}
+								<StaticImage
+									src={"../images/guild-icons/guildicon4.png"}
 									alt="Seasalt's Karuta Shore"
 								/>
 							</a>
