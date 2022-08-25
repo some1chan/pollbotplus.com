@@ -11,6 +11,7 @@ const config: GatsbyConfig = {
 	// Learn more at: https://gatsby.dev/graphql-typegen
 	graphqlTypegen: true,
 	plugins: [
+		`gatsby-plugin-pnpm`,
 		"gatsby-plugin-sass",
 		"gatsby-plugin-image",
 		"gatsby-plugin-sitemap",
@@ -21,7 +22,24 @@ const config: GatsbyConfig = {
 			}
 		},
 		"gatsby-plugin-mdx",
-		"gatsby-plugin-sharp",
+		{
+			resolve: `gatsby-plugin-sharp`,
+			options: {
+			  defaults: {
+				formats: [`auto`, `webp`],
+				placeholder: `blurred`,
+				quality: 50,
+				breakpoints: [750, 1080, 1366, 1920],
+				backgroundColor: `transparent`,
+				tracedSVGOptions: {},
+				blurredOptions: {},
+				jpgOptions: {},
+				pngOptions: {},
+				webpOptions: {},
+				avifOptions: {},
+			  }
+			}
+		  },
 		"gatsby-transformer-sharp",
 		{
 			resolve: "gatsby-source-filesystem",
