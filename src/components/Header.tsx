@@ -53,17 +53,9 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 						</Link>
 					</div>
 					<ul className="nav-links mid">
-						<li className="nav-item">
-							<Link to="/">
-								<a
-									className={
-										props.selected == "home"
-											? "selected"
-											: ""
-									}
-								>
-									Home
-								</a>
+						<li className={`nav-item`}>
+							<Link to="/" activeClassName="selected">
+								Home
 							</Link>
 						</li>
 						{/* <li className="nav-item">
