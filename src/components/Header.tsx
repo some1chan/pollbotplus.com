@@ -1,9 +1,10 @@
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import * as React from "react"
+import * as React from "react";
 // import Button from "./Button";
 import Sun from "./svg/Sun";
 import Moon from "./svg/Moon";
+import Logo from "./svg/Logo";
 
 export default function Header(props: { selected?: "home" | "pricing" }) {
 	function toggleDarkMode() {
@@ -45,12 +46,7 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 					<div style={{ display: "flex", alignItems: "center" }}>
 						<Link to="/">
 							<div className="branding" tabIndex={0}>
-								<StaticImage
-									src={"../images/favicon.svg"}
-									alt="Logo"
-									width={32}
-									height={32}
-								/>
+								<Logo />
 							</div>
 						</Link>
 						<Link to="/">

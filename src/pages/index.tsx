@@ -1,9 +1,8 @@
 import * as React from "react"
-import type { HeadFC } from "gatsby"
 import Layout from "../components/Layout"
 import Footer from "../components/Footer";
 import { StaticImage } from "gatsby-plugin-image"
-import * as Landing from "../styles/Landing.module.scss";
+import * as Landing from "../styles/Landing.module.scss"; 
 import Button from "../components/Button";
 import Header from "../components/Header";
 
