@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 import { useEffect } from "react";
 
 export default function Layout({ children }: any) {
-  useEffect(() => {
+	useEffect(() => {
 		const browserDefaultDark = window.matchMedia(
 			"(prefers-color-scheme: dark)"
 		).matches;
@@ -14,7 +14,5 @@ export default function Layout({ children }: any) {
 			document.documentElement.classList.add("dark");
 		}
 	}, []);
-  return <div>{
-    children}
-    </div>
+	return <div id="root">{children}</div>;
 }
