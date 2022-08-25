@@ -1,5 +1,10 @@
+import * as React from "react";
 import ReactMarkdown from "react-markdown";
-import * as React from "react"
+
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 const markdown = `
 # Terms of Service
 
@@ -22,11 +27,15 @@ If you have any questions or suggestions about these terms, do not hesitate to j
 
 const TermsOfService = () => {
 	return (
-		<div className="width-wrapper p-wrapper p2-wrapper">
-			<ReactMarkdown children={markdown} />
-			<br />
-			<br />
-		</div>
+		<Layout>
+			<Header />
+			<div className="width-wrapper p-wrapper p2-wrapper">
+				<ReactMarkdown children={markdown} />
+				<br />
+				<br />
+			</div>
+			<Footer />
+		</Layout>
 	);
 };
 
