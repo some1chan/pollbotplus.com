@@ -1,7 +1,6 @@
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-// import Button from "./Button";
+import { Link } from "gatsby";
+
 import Sun from "./svg/Sun";
 import Moon from "./svg/Moon";
 import Logo from "./svg/Logo";
