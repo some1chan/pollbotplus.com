@@ -96,7 +96,7 @@
 }
 
 .nav-item a {
-	color: var(--text-color);
+	color: var(--text-secondary);
 	margin: 0 0.75rem;
 	display: inline-block;
 	padding: 10px 0.5rem;
@@ -104,7 +104,7 @@
 	border-radius: #{$rounded-corners};
 
 	&:hover {
-		color: var(--primary-color-nav);
+		color: var(--text-color);
 	}
 
 	&.selected {
