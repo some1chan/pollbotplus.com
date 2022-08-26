@@ -9,7 +9,8 @@
 	font-family: "Inter";
 	font-weight: normal;
 	font-display: swap;
-	src: local("Inter"), url(../images/fonts/Inter-Regular.ttf) format("truetype");
+	src: local("Inter"),
+		url(../images/fonts/Inter-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -29,10 +30,12 @@ body {
 
 h1 {
 	letter-spacing: -0.05rem;
-	font-size: 2.25rem;
+	font-size: 2.75rem;
 	font-weight: bold;
 	margin-top: 1.25rem;
 	margin-bottom: 1.25rem;
+	margin: 4rem 0;
+	text-align: center;
 }
 
 h2 {
@@ -40,7 +43,7 @@ h2 {
 	letter-spacing: -0.025em;
 	font-size: 1.5rem;
 	font-weight: bold;
-	margin-top: 2.5rem;
+	margin-top: 4rem;
 	margin-bottom: 0rem;
 
 	// body.dark & {
@@ -87,4 +90,21 @@ button {
 	font-family: "Readex Pro";
 	font-size: 16px;
 	cursor: pointer;
+}
+
+// Custom commonly-used classes
+.width-wrapper {
+	max-width: 86rem;
+	width: 100vw;
+	margin: 0 auto;
+}
+
+.p-wrapper {
+	padding: 0 2rem;
+	box-sizing: border-box;
+}
+
+.p2-wrapper {
+	padding-inline: 18rem;
+	padding-bottom: 6rem;
 }

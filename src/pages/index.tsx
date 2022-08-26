@@ -76,7 +76,7 @@ export default function IndexPage() {
 
 			<div className={Landing.trustedBanner}>
 				<div
-					className={`${Landing.items} width-wrapper p-wrapper p2-wrapper`}
+					className={`${Landing.items} width-wrapper p-wrapper ${Landing.p2Wrapper}`}
 				>
 					<h2>Trusted by 2,600+ servers.</h2>
 					<ul>
@@ -137,7 +137,7 @@ export default function IndexPage() {
 			</div>
 
 			<div
-				className={`${Landing.elegance} width-wrapper p-wrapper p2-wrapper`}
+				className={`${Landing.elegance} width-wrapper p-wrapper ${Landing.p2Wrapper}`}
 			>
 				<h2>Elegance through Power.</h2>
 				<p>

@@ -76,8 +76,6 @@ const PrivacyPolicy = () => {
 			<Header />
 			<div className="width-wrapper p-wrapper p2-wrapper">
 				<ReactMarkdown children={markdown} />
-				<br />
-				<br />
 			</div>
 			<Footer />
 		</Layout>
