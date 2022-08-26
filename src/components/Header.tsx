@@ -42,16 +42,10 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 		<header className="bg-wrapper">
 			<div className="width-wrapper p-wrapper">
 				<div className="nav-bar">
-					<div style={{ display: "flex", alignItems: "center" }}>
-						<Link to="/">
-							<div className="branding" tabIndex={0}>
-								<Logo />
-							</div>
-						</Link>
-						<Link to="/">
-							<h1>PollBotPlus</h1>
-						</Link>
-					</div>
+					<Link to="/" style={{ display: "flex", alignItems: "center" }}>
+						<Logo />
+						<h1>PollBotPlus</h1>
+					</Link>
 					<ul className="nav-links mid">
 						<li className={`nav-item`}>
 							<Link to="/" activeClassName="selected">
