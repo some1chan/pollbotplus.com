@@ -6,6 +6,12 @@ import Footer from "../components/Footer";
 import Button from "../components/Button";
 import Header from "../components/Header";
 
+import User from "../components/svg/User";
+import Clock from "../components/svg/Clock";
+import Tool from "../components/svg/Tool";
+import EyeOff from "../components/svg/EyeOff";
+import Lock from "../components/svg/Lock";
+
 // @ts-ignore
 import * as Landing from "../styles/Landing.module.scss";
 
@@ -55,20 +61,20 @@ export default function IndexPage() {
 				<div className={Landing.imageContainer}>
 					<div className={`${Landing.image} ${Landing.lightImage}`}>
 						<StaticImage
-							src={"../images/PBP AnimesRealSlashCommand.png"}
+							src={"../images/PBP AnimesReal.png"}
 							alt="A poll made by a user"
-							quality={100}
 							formats={["png"]}
+							loading="eager"
+							quality={90}
 						/>
 					</div>
 					<div className={`${Landing.image} ${Landing.darkImage}`}>
 						<StaticImage
-							src={
-								"../images/PBP AnimesRealSlashCommand Dark.png"
-							}
+							src={"../images/PBP AnimesReal Dark.png"}
 							alt="A poll made by a user"
-							quality={90}
 							formats={["png"]}
+							loading="eager"
+							quality={90}
 						/>
 					</div>
 				</div>
@@ -139,11 +145,61 @@ export default function IndexPage() {
 			<div
 				className={`${Landing.elegance} width-wrapper p-wrapper ${Landing.p2Wrapper}`}
 			>
-				<h2>Elegance through Power.</h2>
-				<p>
-					Using PollBotPlus’s powerful command system, users can
-					design polls to their liking.
-				</p>
+				<div>
+					<h2>Elegance through Power.</h2>
+					<p>
+						Using PollBotPlus’s powerful command system, users can
+						design polls to their liking.
+					</p>
+					<ul>
+						<li>
+							<User />
+							Limit users to vote for one choice, or allow voting
+							for multiple
+						</li>
+						<li>
+							<Clock />
+							Make timed polls, which lets a poll automatically
+							close itself
+						</li>
+						<li>
+							<Tool />
+							Change when results are shown, or when the poll ends
+						</li>
+						<li>
+							<EyeOff />
+							Anonymous polls will hide which users voted for what
+							choice
+						</li>
+						<li >
+							<Lock />
+							Semi-anonymous polls only let some users view who
+							voted for what choice
+						</li>
+					</ul>
+				</div>
+
+				<div className={`${Landing.imageContainer}`}>
+					<div className={`${Landing.image} ${Landing.lightImage}`}>
+						<StaticImage
+							src={"../images/PBP MovieNight.png"}
+							alt="A poll made by a user"
+							formats={["png"]}
+							layout="fixed"
+							quality={90}
+						/>
+					</div>
+					<div className={`${Landing.image} ${Landing.darkImage}`}>
+						<StaticImage
+							src={"../images/PBP MovieNight Dark.png"}
+							alt="A poll made by a user"
+							formats={["png"]}
+							width={539}
+							height={542}
+							quality={90}
+						/>
+					</div>
+				</div>
 			</div>
 			<Footer selected="home" />
 		</Layout>

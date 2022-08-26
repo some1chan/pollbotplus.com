@@ -1,7 +1,8 @@
-import * as React from "react"
+import * as React from "react";
+
 // https://feathericons.com/?query=sun
 // https://www.svgminify.com/
-const Sun = () => {
+export default function Sun() {
 	const element = (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +31,4 @@ const Sun = () => {
 	);
 
 	return element;
-};
-
-export default Sun;
+}

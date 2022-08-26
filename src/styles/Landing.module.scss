@@ -175,19 +175,19 @@
 			height: auto;
 		}
 	}
+}
 
-	.dark-image {
-		display: none;
-		:global(html.dark) & {
-			display: inherit;
-		}
-	}
-
-	.light-image {
+.dark-image {
+	display: none;
+	:global(html.dark) & {
 		display: inherit;
-		:global(html.dark) & {
-			display: none;
-		}
+	}
+}
+
+.light-image {
+	display: inherit;
+	:global(html.dark) & {
+		display: none;
 	}
 }
 
@@ -260,7 +260,49 @@
 }
 
 .elegance {
+	display: flex;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+
+	svg {
+		top: 0.1875em;
+		position: relative;
+		font-size: 2em;
+		stroke: var(--primary-color);
+		padding-right: 24px;
+	}
+
 	h2 {
+		margin-top: 0;
 		font-size: 3.5rem;
+		width: 26rem;
+	}
+
+	p {
+		width: 24rem;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+
+		// width: 24rem;
+	}
+
+	li {
+		list-style: none;
+		padding-top: 0.625rem;
+		padding-bottom: 0.625rem;
+
+		&.lock {
+			list-style-image: url("../images/svg/lock.svg");
+			::marker {
+				stroke: var(--primary-color);
+			}
+		}
+	}
+
+	.image {
+		margin-left: auto;
 	}
 }
