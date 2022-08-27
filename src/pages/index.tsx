@@ -15,11 +15,20 @@ import { ReactComponent as Lock } from "../images/svg/lock.svg";
 
 // @ts-ignore
 import * as Landing from "../styles/Landing.module.scss";
+import { graphql, useStaticQuery } from "gatsby";
 
 const INVITE_URL =
 	"https://discord.com/oauth2/authorize?client_id=804245390642642965&scope=bot&permissions=2416438336";
 
 export default function IndexPage() {
+	const gatsbyRepoData = useStaticQuery(graphql`
+		query {
+			topgg {
+				serverCount
+			}
+		}
+	`);
+
 	return (
 		<Layout>
 			<div className={Landing.bgWrapperLanding}>
@@ -85,7 +94,16 @@ export default function IndexPage() {
 				<div
 					className={`${Landing.items} width-wrapper p-wrapper ${Landing.p2Wrapper}`}
 				>
-					<h2>Trusted by 2,600+ servers.</h2>
+					<h2>
+						Trusted by{" "}
+						{(
+							Math.floor(
+								(gatsbyRepoData?.topgg?.serverCount ?? 2750) /
+									100
+							) * 100
+						).toLocaleString()}
+						+ servers.
+					</h2>
 					<ul>
 						<li>
 							<a

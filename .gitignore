@@ -14,6 +14,5 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
-.env*.local
-
+# dotenv environment variable files
+.env*

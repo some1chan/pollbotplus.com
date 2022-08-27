@@ -16,7 +16,9 @@
   "dependencies": {
     "@mdx-js/react": "^2.1.2",
     "@svgr/webpack": "^6.3.1",
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
+    "dotenv": "^16.0.1",
     "gatsby": "^4.21.0",
     "gatsby-plugin-image": "^2.21.0",
     "gatsby-plugin-manifest": "^4.21.0",
