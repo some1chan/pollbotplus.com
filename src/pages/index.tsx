@@ -11,6 +11,7 @@ import Clock from "../components/svg/Clock";
 import Tool from "../components/svg/Tool";
 import EyeOff from "../components/svg/EyeOff";
 import Lock from "../components/svg/Lock";
+import SEO from "../components/SEO";
 
 // @ts-ignore
 import * as Landing from "../styles/Landing.module.scss";
@@ -171,7 +172,7 @@ export default function IndexPage() {
 							Anonymous polls will hide which users voted for what
 							choice
 						</li>
-						<li >
+						<li>
 							<Lock />
 							Semi-anonymous polls only let some users view who
 							voted for what choice
@@ -207,13 +208,5 @@ export default function IndexPage() {
 }
 
 export function Head() {
-	return (
-		<>
-			<title>PollBotPlus | Make Beautiful Polls on Discord.</title>
-			<meta
-				name="viewport"
-				content="width=device-width, initial-scale=1"
-			/>
-		</>
-	);
+	return <SEO />;
 }

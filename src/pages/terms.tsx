@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const markdown = `
 # Terms of Service
@@ -24,7 +25,7 @@ This policy is effective as of 30 August 2022 and was last updated on 30 August 
 
 If you have any questions or suggestions about the privacy policy, do not hesitate to join the [Discord support server](https://discord.gg/QrRrnSDjHw), and message me at some1chan#0035. Please don't send me a friend request, I will likely ignore it!`;
 
-const TermsOfService = () => {
+export default function TermsOfService() {
 	return (
 		<Layout>
 			<Header />
@@ -34,6 +35,8 @@ const TermsOfService = () => {
 			<Footer />
 		</Layout>
 	);
-};
+}
 
-export default TermsOfService;
+export function Head() {
+	return <SEO />;
+}
