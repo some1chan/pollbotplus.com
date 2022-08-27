@@ -4,6 +4,10 @@
 }
 
 .p2-wrapper {
+	padding-inline: 12.5rem;
+}
+
+.p3-wrapper {
 	padding-inline: 7.5rem;
 }
 
@@ -159,7 +163,7 @@
 	}
 
 	.image {
-		padding: 5rem;
+		padding: 5rem 0;
 		// width: 462px;
 		// height: auto;
 		height: auto;
@@ -170,10 +174,10 @@
 		// 	height: auto;
 		// }
 
-		@media screen and (max-width: 1631px) {
-			width: 376px;
-			height: auto;
-		}
+		// @media screen and (max-width: 1631px) {
+		// 	width: 376px;
+		// 	height: auto;
+		// }
 	}
 }
 
@@ -265,11 +269,10 @@
 	padding-bottom: 6rem;
 
 	svg {
-		top: 0.1875em;
-		position: relative;
 		font-size: 2em;
 		stroke: var(--primary-color);
 		padding-right: 24px;
+		overflow: visible;
 	}
 
 	h2 {
@@ -293,13 +296,7 @@
 		list-style: none;
 		padding-top: 0.625rem;
 		padding-bottom: 0.625rem;
-
-		&.lock {
-			list-style-image: url("../images/svg/lock.svg");
-			::marker {
-				stroke: var(--primary-color);
-			}
-		}
+		display: flex;
 	}
 
 	.image {

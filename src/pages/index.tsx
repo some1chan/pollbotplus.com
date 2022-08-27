@@ -5,13 +5,13 @@ import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import Header from "../components/Header";
-
-import User from "../components/svg/User";
-import Clock from "../components/svg/Clock";
-import Tool from "../components/svg/Tool";
-import EyeOff from "../components/svg/EyeOff";
-import Lock from "../components/svg/Lock";
 import SEO from "../components/SEO";
+
+import { ReactComponent as User } from "../images/svg/user.svg";
+import { ReactComponent as Clock } from "../images/svg/clock.svg";
+import { ReactComponent as Tool } from "../images/svg/tool.svg";
+import { ReactComponent as EyeOff } from "../images/svg/eye-off.svg";
+import { ReactComponent as Lock } from "../images/svg/lock.svg";
 
 // @ts-ignore
 import * as Landing from "../styles/Landing.module.scss";
@@ -144,7 +144,7 @@ export default function IndexPage() {
 			</div>
 
 			<div
-				className={`${Landing.elegance} width-wrapper p-wrapper ${Landing.p2Wrapper}`}
+				className={`${Landing.elegance} width-wrapper p-wrapper ${Landing.p3Wrapper}`}
 			>
 				<div>
 					<h2>Elegance through Power.</h2>
