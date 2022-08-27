@@ -2,7 +2,7 @@
 	font-family: "Readex Pro";
 	font-display: swap;
 	src: local("Readex Pro"),
-		url(../images/fonts/ReadexPro-Regular.ttf) format("truetype");
+		url(../fonts/ReadexPro-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -10,14 +10,14 @@
 	font-weight: normal;
 	font-display: swap;
 	src: local("Inter"),
-		url(../images/fonts/Inter-Regular.ttf) format("truetype");
+		url(../fonts/Inter-Regular.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "Inter";
 	font-weight: bold;
 	font-display: swap;
-	src: local("Inter"), url(../images/fonts/Inter-Bold.ttf) format("truetype");
+	src: local("Inter"), url(../fonts/Inter-Bold.ttf) format("truetype");
 }
 
 body {
