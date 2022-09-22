@@ -21,9 +21,9 @@ For a better experience, while using our Service, we may require you to provide 
 
 The bot collects information including, but not limited to: 
 
-- **User IDs** - your account's unique identifier in Discord. Obtainable by any Discord user.
-- **Channel IDs** - a channel which a poll's been sent to. Obtainable by any Discord user.
-- **Guild IDs** - your server's unique identifier in Discord. Obtainable by any Discord user.
+- **User IDs** - your account's unique identifier in Discord.
+- **Channel IDs** - a channel which a poll's been sent to.
+- **Guild IDs** - your server's unique identifier in Discord.
 
 The bot also logs the following information in case of, but not limited to, errors, user experience improvements, support tickets, and bot growth analytics:
 
@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
 	return (
 		<Layout>
 			<Header />
-			<div className="width-wrapper p-wrapper p2-wrapper">
+			<div className="width-wrapper p-wrapper t-wrapper">
 				<ReactMarkdown children={markdown} />
 			</div>
 			<Footer />

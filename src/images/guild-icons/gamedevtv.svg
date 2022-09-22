@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 224 224"
+   version="1.1"
+   sodipodi:docname="gamedevtv-border-white.svg"
+   width="224"
+   height="224"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="105.18213"
+     inkscape:cy="104.47503"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <path
+     id="path177"
+     d="m 111.99995,34.7649 c -42.655699,0 -77.234999,34.5792 -77.234999,77.235 v 0 77.2352 h 77.234999 c 42.6558,0 77.2351,-34.5792 77.2351,-77.235 v 0 -77.2352 z"
+     style="fill:#ffffff"
+     sodipodi:nodetypes="ssccssccs"
+     inkscape:label="white" />
+  <path
+     id="logoMark"
+     d="m 111.99995,34.7649 c -42.655699,0 -77.234999,34.5792 -77.234999,77.235 v 0 77.2352 h 77.234999 c 42.6558,0 77.2351,-34.5792 77.2351,-77.235 v 0 -77.2352 z m 5.7442,113.7397 H 92.218651 v 25.5255 h -16.7233 v -25.5255 h -25.5254 v -16.7233 h 25.5255 v -25.5255 h 16.7233 v 25.5255 h 25.525499 v 16.7233 z m 56.2859,-56.285902 h -25.5255 V 117.7442 h -16.7234 V 92.218698 h -25.5255 V 75.4954 h 25.5255 V 49.9699 h 16.7234 v 25.5255 h 25.5255 z"
+     style="fill:#4fbaa0" />
+</svg>

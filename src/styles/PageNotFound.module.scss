@@ -1,0 +1,23 @@
+.page-not-found {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	text-align: center;
+
+	h1 {
+		margin: 4rem auto 1rem auto;
+	}
+
+	a, p {
+		margin: 1rem auto;
+	}
+
+	p {
+		max-width: 24rem;
+	}
+
+	a {
+		max-width: fit-content;
+		margin: 1rem auto;
+	}
+}

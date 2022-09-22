@@ -1,6 +1,7 @@
 :root {
 	--background-color: #fff;
-	--secondary-background-color: #fbfbfb;
+	// --secondary-background-color: #fbfbfb;
+	--secondary-background-color: #f8f8f8;
 	--text-color: rgb(3, 9, 32);
 	--link-color: #368ee5;
 	--button-text-color: #{$button-text-color};
@@ -15,7 +16,6 @@
 	--secondary-color-darker: hsl(0, 0%, 50%);
 	--secondary-button-color: hsl(0, 0%, 60%);
 	--secondary-button-color-lighter: hsl(0, 0%, 50%);
-
 	--secondary-button-color-darker: hsl(0, 0%, 50%);
 }
 
@@ -23,7 +23,9 @@
 	color-scheme: dark;
 
 	--background-color: #080709;
-	--secondary-background-color: hsl(270, 4%, 7%);
+	--secondary-background-color: hsl(200, 4%, 7%);
+	// Discord
+	// --secondary-background-color: hsl(200, 6%, 10%);
 	--text-color: #f8f8f8;
 	--link-color: #3387db;
 	--button-text-color: #{$button-text-color};

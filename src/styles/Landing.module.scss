@@ -1,14 +1,15 @@
+html {
+	// For anchor tags
+	scroll-behavior: smooth;
+}
+
 .bg-wrapper-landing {
-	background-image: url("../images/abstract-light.png");
+	// background-image: url("../images/abstract-light.png");
 	background-size: cover;
 }
 
 .p2-wrapper {
 	padding-inline: 12.5rem;
-}
-
-.p3-wrapper {
-	padding-inline: 7.5rem;
 }
 
 .top-landing {
@@ -19,10 +20,9 @@
 	align-content: center;
 	min-height: 10rem;
 
-	// @media screen and (max-width: 1110px) {
-	// 	display: revert;
-	// 	margin: 0 auto;
-	// }
+	@media screen and (max-width: 1110px) {
+		// padding: 2rem 0;
+	}
 
 	.text-and-buttons {
 		display: flex;
@@ -38,7 +38,7 @@
 		}
 
 		@media screen and (max-width: 1110px) {
-			padding: 4rem 0;
+			// padding: 4rem 0;
 		}
 	}
 
@@ -63,13 +63,6 @@
 				max-width: 2rem;
 			}
 		}
-
-		// .button {
-		// 	@media screen and (max-width: 1110px) {
-		// 		margin: 5px;
-		// 		padding: .75rem 5rem;
-		// 	}
-		// }
 	}
 
 	h2 {
@@ -79,43 +72,19 @@
 		text-align: center;
 		margin: 0;
 
-		// iOS device
-		@media screen and (max-width: 428px) {
-			font-size: 2.75rem;
+		@media screen and (max-width: 1023px) {
+			font-size: 3rem;
 		}
 
-		// iOS device
-		@media screen and (max-width: 375px) {
-			font-size: 2.65rem;
+		// @media screen and (max-width: 525px) {
+		@media screen and (max-width: 638px) {
+			// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+			// Minimum viewport width = 360px
+			// Maximum viewport width = 926px
+			font-size: clamp(2.5rem, 1.4091rem + 4.8485vw, 3rem);
+			display: inline-flex;
+			max-width: 24rem;
 		}
-
-		// @media screen and (max-width: 1631px) {
-		// 	font-size: 62px;
-		// 	width: 600px;
-		// }
-
-		// @media screen and (max-width: 1110px) {
-		// 	// font-size: 69px;
-		// 	// width: 686px;
-		// 	font-size: clamp(40px, 3.5vw, 69px);
-		// 	text-align: center;
-		// 	width: auto;
-		// 	justify-content: center;
-		// 	justify-items: center;
-		// 	justify-self: center;
-		// }
-
-		// @media screen and (max-width: 1538px) {
-		// 	font-size: 62px;
-		// }
-
-		// @media screen and (max-width: 1508px) {
-		// 	font-size: 60px;
-		// }
-
-		// @media screen and (max-width: 1490px) {
-		// 	font-size: 58px;
-		// }
 	}
 
 	p {
@@ -145,39 +114,13 @@
 }
 
 .poll-gallery {
-	display: grid;
-
 	.image-container {
 		justify-self: center;
-
-		// padding: 0 0 0 48px;
-		// flex-shrink: 1;
-
-		// @media screen and (max-width: 1110px) {
-		// 	display: flex;
-		// 	justify-content: center;
-		// 	padding: 48px 0 96px 0;
-		// }
-
-		// display: none;
 	}
 
 	.image {
-		padding: 5rem 0;
-		// width: 462px;
-		// height: auto;
+		padding: 4.5rem 0 5rem 0;
 		height: auto;
-		// width: 100%;
-
-		// @media screen and (max-width: 1725px) {
-		// 	width: 406px;
-		// 	height: auto;
-		// }
-
-		// @media screen and (max-width: 1631px) {
-		// 	width: 376px;
-		// 	height: auto;
-		// }
 	}
 }
 
@@ -201,11 +144,12 @@
 	a {
 		display: inline-flex;
 
-		StaticImage {
+		img {
 			width: 64px;
 			height: 64px;
+			border-radius: 50%;
 
-			@media screen and (max-width: 1210px) {
+			@media screen and (max-width: 525px) {
 				width: 48px;
 				height: 48px;
 			}
@@ -213,8 +157,9 @@
 	}
 
 	h2 {
+		letter-spacing: -0.025em;
 		font-weight: bold;
-		font-size: 32px;
+		font-size: 2rem;
 		margin: 0;
 		padding: 3rem 0;
 		// margin: 1rem;
@@ -222,6 +167,11 @@
 		@media screen and (max-width: 1210px) {
 			text-align: center;
 			padding: 2rem 0 0 0;
+		}
+
+		@media screen and (max-width: 525px) {
+			font-size: 1.5rem;
+			padding: 1rem 0 0 0;
 		}
 	}
 
@@ -235,12 +185,16 @@
 			padding: 1rem 0 2rem 0;
 		}
 
+		@media screen and (max-width: 525px) {
+			padding: 0.5rem 0 1rem 0;
+		}
+
 		li {
 			padding-left: 1.5rem;
 
 			@media screen and (max-width: 1210px) {
-				padding-left: 0.75rem;
-				padding-right: 0.75rem;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
 			}
 		}
 	}
@@ -264,43 +218,228 @@
 	}
 }
 
-.elegance {
-	display: flex;
-	padding-top: 6rem;
-	padding-bottom: 6rem;
+.line-divider {
+	// Based on var(--secondary-color) but transparent
+	border-top-color: #f2f3f5;
 
-	svg {
-		font-size: 2em;
-		stroke: var(--primary-color);
-		padding-right: 24px;
-		overflow: visible;
+	border-top-style: solid;
+	border-top-width: 2px;
+
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+
+	:global(html.dark) & {
+		// Based on secondary-color-darker
+		// border-top-color: var(--secondary-color-darker);
+		border-top-color: #17191a;
 	}
+}
+
+.landing-element {
+	display: flex;
 
 	h2 {
+		font-size: 3rem;
+		letter-spacing: -0.15rem;
 		margin-top: 0;
-		font-size: 3.5rem;
-		width: 26rem;
-	}
 
-	p {
-		width: 24rem;
+		@media screen and (max-width: 525px) {
+			font-size: 1.875rem;
+			letter-spacing: -0.025em;
+		}
 	}
 
 	ul {
 		padding: 0;
 		margin: 0;
-
-		// width: 24rem;
 	}
 
-	li {
-		list-style: none;
-		padding-top: 0.625rem;
-		padding-bottom: 0.625rem;
-		display: flex;
+	// max-width: 58vw;
+	max-width: 70rem;
+}
+
+.info-group {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+
+	.info {
+		flex-basis: 30rem;
+		padding-right: 3rem;
+
+		@media screen and (max-width: 1210px) {
+			flex-basis: auto;
+			padding-right: 0;
+		}
 	}
 
-	.image {
-		margin-left: auto;
+	.elegance {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+
+		svg {
+			font-size: 2em;
+			stroke: var(--primary-color);
+			padding-right: 24px;
+			overflow: visible;
+		}
+
+		li {
+			list-style: none;
+			padding-top: 0.625rem;
+			padding-bottom: 0.625rem;
+			display: flex;
+		}
+
+		h2 {
+			font-size: 3.5rem;
+			width: 26rem;
+
+			@media screen and (max-width: 1210px) {
+				width: auto;
+			}
+
+			@media screen and (max-width: 1023px) {
+				font-size: 3rem;
+			}
+
+			@media screen and (max-width: 699px) {
+				// max-width: 14rem;
+				// letter-spacing: -0.025em;
+				// max-width: 14rem;
+				// text-align: left;
+				// margin: 1rem 0;
+				// padding: 0;
+				// margin: 1rem auto;
+			}
+
+			@media screen and (max-width: 593px) {
+				max-width: 21rem;
+			}
+
+			@media screen and (max-width: 525px) {
+				max-width: 14rem;
+				font-size: 1.875rem;
+			}
+		}
+
+		p {
+			width: 24rem;
+
+			@media screen and (max-width: 1210px) {
+				width: auto;
+				text-align: center;
+			}
+
+			@media screen and (max-width: 699px) {
+				max-width: 400px;
+				// margin: 1rem auto;
+				text-align: left;
+				// margin: 1rem 0;
+				padding: 0;
+			}
+		}
+
+		.image-container {
+			margin-left: auto;
+
+			@media screen and (max-width: 1210px) {
+				padding-top: 4rem;
+				margin: 0 auto;
+			}
+		}
+
+		.info {
+			flex-basis: 33rem;
+
+			@media screen and (max-width: 1210px) {
+				flex-basis: auto;
+			}
+		}
+
+		@media screen and (max-width: 1210px) {
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+
+	.simplicity {
+		@media screen and (max-width: 1127px) {
+			flex-direction: column;
+		}
+
+		.info {
+			align-self: flex-end;
+			flex-basis: auto;
+			padding-right: 0;
+
+			@media screen and (max-width: 1127px) {
+				align-self: center;
+				text-align: center;
+			}
+
+			.image {
+				@media screen and (max-width: 1127px) {
+					align-self: center;
+					padding-top: 2rem;
+					text-align: center;
+				}
+			}
+		}
+
+		.image-container {
+			z-index: -1;
+			margin-left: auto;
+			position: relative;
+			left: 26px;
+
+			@media screen and (max-width: 1127px) {
+				margin-left: 0;
+				align-self: center;
+				padding-top: 2rem;
+				left: 0;
+			}
+
+			@media screen and (max-width: 525px) {
+				flex-direction: column;
+			}
+		}
+
+		.compressedImage {
+			display: none;
+			@media screen and (max-width: 1127px) {
+				display: unset;
+			}
+		}
+		.uncompressedImage {
+			@media screen and (max-width: 1127px) {
+				display: none;
+			}
+		}
+	}
+
+	.invisibility {
+		@media screen and (max-width: 1210px) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		p {
+			@media screen and (max-width: 1210px) {
+				max-width: 35rem;
+			}
+		}
+
+		.image-container {
+			position: relative;
+			left: -8px;
+			margin-left: auto;
+
+			@media screen and (max-width: 1210px) {
+				left: 0;
+				margin: 2rem auto;
+			}
+		}
 	}
 }

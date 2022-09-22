@@ -57,9 +57,9 @@ const config: GatsbyConfig = {
 			},
 			__key: "pages",
 		},
-		{
-			resolve: "gatsby-plugin-svgr",
-		},
+		"gatsby-plugin-svgr",
+		"gatsby-background-image",
+		"gatsby-plugin-meta-redirect", // Should be last, according to its docs
 	],
 };
 

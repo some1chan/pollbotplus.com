@@ -1,50 +1,40 @@
 import * as React from "react";
+
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 import { Link } from "gatsby";
 
-const pageStyles = {
-	color: "#232129",
-	padding: "96px",
-	fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-	marginTop: 0,
-	marginBottom: 64,
-	maxWidth: 320,
-};
+// @ts-ignore
+import * as PageNotFound from "../styles/PageNotFound.module.scss";
 
-const paragraphStyles = {
-	marginBottom: 48,
-};
-const codeStyles = {
-	color: "#8A6534",
-	padding: 4,
-	backgroundColor: "#FFF4DB",
-	fontSize: "1.25rem",
-	borderRadius: 4,
-};
-
-export default function NotFoundPage() {
+export default function PrivacyPolicy() {
 	return (
-		<main style={pageStyles}>
-			<h1 style={headingStyles}>Page not found</h1>
-			<p style={paragraphStyles}>
-				Sorry 😔, we couldn’t find what you were looking for.
-				<br />
-				{process.env.NODE_ENV === "development" ? (
-					<>
-						<br />
-						Try creating a page in{" "}
-						<code style={codeStyles}>src/pages/</code>.
-						<br />
-					</>
-				) : null}
-				<br />
-				<Link to="/">Go home</Link>.
-			</p>
-		</main>
+		<Layout>
+			<Header />
+			<div
+				className={`width-wrapper p-wrapper ${PageNotFound.pageNotFound}`}
+			>
+				<h1>Page Not Found</h1>
+				<p>
+					Please tell an admin at the{" "}
+					<a href="https://dsc.gg/pollbotplus-support">
+						support server
+					</a>{" "}
+					if you somehow come across this unintentionally.
+				</p>
+				<Link to="/">Go Back Home</Link>
+			</div>
+			<Footer />
+		</Layout>
 	);
 }
 
 export function Head() {
-	return <title>Not found</title>;
+	return (
+		<>
+			<SEO />
+		</>
+	);
 }

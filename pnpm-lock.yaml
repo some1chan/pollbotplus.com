@@ -10,9 +10,11 @@ specifiers:
   classnames: ^2.3.1
   dotenv: ^16.0.1
   gatsby: ^4.21.0
+  gatsby-background-image: ^1.6.0
   gatsby-plugin-image: ^2.21.0
   gatsby-plugin-manifest: ^4.21.0
   gatsby-plugin-mdx: ^4.0.0
+  gatsby-plugin-meta-redirect: ^1.1.1
   gatsby-plugin-pnpm: ^1.2.10
   gatsby-plugin-sass: ^5.21.0
   gatsby-plugin-sharp: ^4.21.0
@@ -20,6 +22,7 @@ specifiers:
   gatsby-plugin-svgr: 3.0.0-beta.0
   gatsby-source-filesystem: ^4.21.0
   gatsby-transformer-sharp: ^4.21.0
+  gbimage-bridge: ^0.2.2
   react: ^18.1.0
   react-dom: ^18.1.0
   react-markdown: ^8.0.3
@@ -33,9 +36,11 @@ dependencies:
   classnames: 2.3.1
   dotenv: 16.0.1
   gatsby: 4.21.0_5pseeqoa3w4jcl6fccmssxxawy
+  gatsby-background-image: 1.6.0_d5gxdym3z7z6jamckkp57msxsy
   gatsby-plugin-image: 2.21.0_thmybvw3ouamivgnb6bnah6c3e
   gatsby-plugin-manifest: 4.21.0_pjdvit3rh5abpubbvbcoesdpsu
   gatsby-plugin-mdx: 4.0.0_qhyly4rgmrzk5im67fnmx4nmke
+  gatsby-plugin-meta-redirect: 1.1.1
   gatsby-plugin-pnpm: 1.2.10_gatsby@4.21.0
   gatsby-plugin-sass: 5.21.0_rl3shjghcmmdoeqoqqwikphjgq
   gatsby-plugin-sharp: 4.21.0_pjdvit3rh5abpubbvbcoesdpsu
@@ -43,6 +48,7 @@ dependencies:
   gatsby-plugin-svgr: 3.0.0-beta.0_vx6yooxxwdth7clpeg37a2mere
   gatsby-source-filesystem: 4.21.0_gatsby@4.21.0
   gatsby-transformer-sharp: 4.21.0_3ydxajezaw4odthxpqqdoi2wre
+  gbimage-bridge: 0.2.2_gjt4fmtictukx3yhy5qf6fpk2q
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-markdown: 8.0.3_ug65io7jkbhmo4fihdmbrh3ina
@@ -6447,6 +6453,12 @@ packages:
       to-regex-range: 5.0.1
     dev: false
 
+  /filter-invalid-dom-props/2.1.0:
+    resolution: {integrity: sha512-M+1dTOodTQwB9Ncin+EwfgksarMCeAW1V2BjPeC5THFSs56rtEX/VF/Mrur9C9A8eyaY+2h25VFAiVr+bkVkwA==}
+    dependencies:
+      html-attributes: 1.1.0
+    dev: false
+
   /filter-obj/1.1.0:
     resolution: {integrity: sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==}
     engines: {node: '>=0.10.0'}
@@ -6604,6 +6616,15 @@ packages:
       universalify: 2.0.0
     dev: false
 
+  /fs-extra/7.0.1:
+    resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
+    engines: {node: '>=6 <7 || >=8'}
+    dependencies:
+      graceful-fs: 4.2.10
+      jsonfile: 4.0.0
+      universalify: 0.1.2
+    dev: false
+
   /fs-extra/9.1.0:
     resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
     engines: {node: '>=10'}
@@ -6650,6 +6671,23 @@ packages:
 
   /functions-have-names/1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+    dev: false
+
+  /gatsby-background-image/1.6.0_d5gxdym3z7z6jamckkp57msxsy:
+    resolution: {integrity: sha512-d3HkZnpfU5KHrjt0Z5Mw6ezOY5OFuPfrHIarN7CMhq+CyUnPTxUuFtic0OV7bgi5J6Z/RGVg36FvcnX69xuDgw==}
+    peerDependencies:
+      gatsby: ^2.0.0 || ^3.0.0 || ^4.0.0
+      react: '>=16.x'
+      react-dom: '>=16.x'
+    dependencies:
+      '@babel/runtime': 7.18.9
+      filter-invalid-dom-props: 2.1.0
+      gatsby: 4.21.0_5pseeqoa3w4jcl6fccmssxxawy
+      global: 4.4.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      short-uuid: 4.2.0
+      sort-media-queries: 0.2.2
     dev: false
 
   /gatsby-cli/4.21.0:
@@ -6884,6 +6922,13 @@ packages:
     transitivePeerDependencies:
       - graphql
       - supports-color
+    dev: false
+
+  /gatsby-plugin-meta-redirect/1.1.1:
+    resolution: {integrity: sha512-Oc4qgU3SlDUM9qoxIMKO+re2bdMs3/a2KXrfL65gb8XMLsHylBbveWtXZRhgjd2QDL/49RX4S9SEykuadRju2w==}
+    engines: {node: '>=8'}
+    dependencies:
+      fs-extra: 7.0.1
     dev: false
 
   /gatsby-plugin-page-creator/4.21.0_pjdvit3rh5abpubbvbcoesdpsu:
@@ -7349,6 +7394,22 @@ packages:
       - webpack-plugin-serve
     dev: false
 
+  /gbimage-bridge/0.2.2_gjt4fmtictukx3yhy5qf6fpk2q:
+    resolution: {integrity: sha512-ROieMnsqN9aHr55oUJd7crfJadZGjGcF59ooHmMbD4KYM/ut0AbafsnJvJaWt3nYAujG+dq/m1eEleRYnTjm4Q==}
+    peerDependencies:
+      gatsby: ^3.0.0 || ^4.0.0
+      gatsby-background-image: ^1.0.0
+      gatsby-plugin-image: ^1.0.0 || ^2.0.0
+      react: ^16.14.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      gatsby: 4.21.0_5pseeqoa3w4jcl6fccmssxxawy
+      gatsby-background-image: 1.6.0_d5gxdym3z7z6jamckkp57msxsy
+      gatsby-plugin-image: 2.21.0_thmybvw3ouamivgnb6bnah6c3e
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
@@ -7807,6 +7868,11 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       lru-cache: 6.0.0
+    dev: false
+
+  /html-attributes/1.1.0:
+    resolution: {integrity: sha512-reT/KK6Ju+DZqAbAn3sIkpMH+658kEsaEjpNrej2O5XSUsH5SzVHX7NGZk5RiZcVi7l+RsV+5q3C6TqM5vxsVA==}
+    engines: {node: '>= 0.10.26', npm: '>=1.4.3'}
     dev: false
 
   /html-entities/1.4.0:
@@ -8472,6 +8538,12 @@ packages:
     resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
     engines: {node: '>=6'}
     hasBin: true
+    dev: false
+
+  /jsonfile/4.0.0:
+    resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
+    optionalDependencies:
+      graceful-fs: 4.2.10
     dev: false
 
   /jsonfile/6.1.0:
@@ -11418,6 +11490,14 @@ packages:
     resolution: {integrity: sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==}
     dev: false
 
+  /short-uuid/4.2.0:
+    resolution: {integrity: sha512-r3cxuPPZSuF0QkKsK9bBR7u+7cwuCRzWzgjPh07F5N2iIUNgblnMHepBY16xgj5t1lG9iOP9k/TEafY1qhRzaw==}
+    engines: {node: '>=8'}
+    dependencies:
+      any-base: 1.1.0
+      uuid: 8.3.2
+    dev: false
+
   /side-channel/1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
@@ -11542,6 +11622,12 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
+    dev: false
+
+  /sort-media-queries/0.2.2:
+    resolution: {integrity: sha512-XwBDwDsHhjcfMPfGakCDWuNBSiTeMmIRNNEb1bYlyzvG81hBRTAQTu40Nm8cyP/a+aFUaDxPqfzncmYKtibi+Q==}
+    dependencies:
+      xtend: 4.0.2
     dev: false
 
   /source-list-map/2.0.1:
@@ -12407,6 +12493,11 @@ packages:
       '@types/unist': 2.0.6
       unist-util-is: 5.1.1
       unist-util-visit-parents: 5.1.0
+    dev: false
+
+  /universalify/0.1.2:
+    resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}
+    engines: {node: '>= 4.0.0'}
     dev: false
 
   /universalify/2.0.0:

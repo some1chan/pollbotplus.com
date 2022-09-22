@@ -4,11 +4,12 @@ dotenv.config({
 });
 
 import axios from "axios";
+import type { SourceNodesArgs } from "gatsby";
 
-exports.sourceNodes = async ({
-	actions: { createNode },
+export async function sourceNodes({
+	actions: { createNode, createRedirect },
 	createContentDigest,
-}) => {
+}: SourceNodesArgs) {
 	const api = process.env.TOP_GG_API ?? "https://top.gg/api";
 	const token = process.env.TOP_GG_TOKEN ?? "";
 	const userId = process.env.DISCORD_USER_ID ?? "804245390642642965";
@@ -33,4 +34,9 @@ exports.sourceNodes = async ({
 			contentDigest: createContentDigest(result.data),
 		},
 	});
-};
+
+	createRedirect({
+		fromPath: `/invite`,
+		toPath: `https://discord.gg/QrRrnSDjHw`,
+	});
+}

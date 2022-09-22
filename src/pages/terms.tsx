@@ -29,7 +29,7 @@ export default function TermsOfService() {
 	return (
 		<Layout>
 			<Header />
-			<div className="width-wrapper p-wrapper p2-wrapper">
+			<div className="width-wrapper p-wrapper t-wrapper">
 				<ReactMarkdown children={markdown} />
 			</div>
 			<Footer />

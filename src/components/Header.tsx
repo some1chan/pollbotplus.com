@@ -42,7 +42,10 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 		<header className="bg-wrapper">
 			<div className="width-wrapper p-wrapper">
 				<div className="nav-bar">
-					<Link to="/" style={{ display: "flex", alignItems: "center" }}>
+					<Link
+						to="/"
+						style={{ display: "flex", alignItems: "center" }}
+					>
 						<Logo />
 						<h1>PollBotPlus</h1>
 					</Link>
@@ -56,16 +59,16 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 								<a href="#">Docs</a>
 							</li> */}
 						<li className="nav-item">
-							<a
+							<Link
 								className={
 									props.selected == "pricing"
 										? "selected"
 										: ""
 								}
-								href=""
+								to="/pricing"
 							>
 								Pricing
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
 							<a href="https://dsc.gg/pollbotplus-support">

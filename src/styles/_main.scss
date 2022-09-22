@@ -9,8 +9,7 @@
 	font-family: "Inter";
 	font-weight: normal;
 	font-display: swap;
-	src: local("Inter"),
-		url(../fonts/Inter-Regular.ttf) format("truetype");
+	src: local("Inter"), url(../fonts/Inter-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -84,6 +83,9 @@ p {
 	display: flex;
 	flex-direction: column;
 	// font-weight: normal;
+
+	// Works, but commented out to catch stuff in dev
+	// overflow-inline: hidden;
 }
 
 button {
@@ -95,16 +97,24 @@ button {
 // Custom commonly-used classes
 .width-wrapper {
 	max-width: 86rem;
-	width: 100vw;
+	width: 100%;
 	margin: 0 auto;
 }
 
 .p-wrapper {
 	padding: 0 2rem;
 	box-sizing: border-box;
+
+	@media screen and (max-width: 525px) {
+		padding: 0 1.5rem;
+	}
 }
 
-.p2-wrapper {
-	padding-inline: 18rem;
+.t-wrapper {
+	max-width: 50rem;
 	padding-bottom: 6rem;
+}
+
+.gatsby-image-wrapper [data-main-image] {
+	transition: opacity 0s linear;
 }
