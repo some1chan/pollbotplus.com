@@ -37,6 +37,6 @@ export async function sourceNodes({
 
 	createRedirect({
 		fromPath: `/invite`,
-		toPath: `https://discord.gg/QrRrnSDjHw`,
+		toPath: `https://discord.gg/r2YMTMydSF`,
 	});
 }

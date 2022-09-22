@@ -23,7 +23,7 @@ This policy is effective as of 30 August 2022 and was last updated on 30 August 
 
 ## Contact Us
 
-If you have any questions or suggestions about the privacy policy, do not hesitate to join the [Discord support server](https://discord.gg/QrRrnSDjHw), and message me at some1chan#0035. Please don't send me a friend request, I will likely ignore it!`;
+If you have any questions or suggestions about the privacy policy, do not hesitate to join the [Discord support server](https://discord.gg/r2YMTMydSF), and message me at some1chan#0035. Please don't send me a friend request, I will likely ignore it!`;
 
 export default function TermsOfService() {
 	return (
