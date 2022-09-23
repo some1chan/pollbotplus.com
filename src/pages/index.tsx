@@ -88,7 +88,6 @@ export default function IndexPage() {
 							alt="Poll with the question 'When should we do movie night?' with 7 PM, 8 PM, and 9 PM as options"
 							formats={["png"]}
 							loading="eager"
-							// height={452}
 							quality={90}
 						/>
 					</div>
@@ -98,7 +97,6 @@ export default function IndexPage() {
 							alt="Poll with the question 'When should we do movie night?' with 7 PM, 8 PM, and 9 PM as options"
 							formats={["png"]}
 							loading="eager"
-							// height={452}
 							quality={90}
 						/>
 					</div>
@@ -245,8 +243,6 @@ export default function IndexPage() {
 								formats={["png"]}
 								objectFit="contain"
 								objectPosition="bottom"
-								width={405}
-								height={140}
 								quality={90}
 							/>
 						</div>
