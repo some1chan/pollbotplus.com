@@ -8,7 +8,6 @@ export function onClientEntry() {
 		(browserDefaultDark && !localStorage.getItem("dark")) ||
 		(!browserDefaultDark && localStorage.getItem("dark"))
 	) {
-		// document.body.classList.add("dark");
 		document.documentElement.classList.add("dark");
 	}
 }
