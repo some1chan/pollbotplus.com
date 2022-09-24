@@ -3,15 +3,7 @@ import Discord from "./svg/Discord";
 import Twitter from "./svg/Twitter";
 import * as React from "react";
 
-export default function Footer(props: { selected?: "home" }) {
-	const scrollToTop = () => {
-		console.log("Scroll to top");
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth", // for smoothly scrolling
-		});
-	};
-
+export default function Footer() {
 	return (
 		<footer>
 			<div
@@ -19,21 +11,14 @@ export default function Footer(props: { selected?: "home" }) {
 				style={{ display: "grid" }}
 			>
 				<div style={{ gridColumn: 1 }}>
-					<div
-						className={props.selected ? "button" : "button hide"}
-						onClick={() => scrollToTop()}
+					<Link
+						to="/"
+						style={{
+							height: "auto",
+							display: "inline-block",
+						}}
 					>
-						<h2 className="">PollBotPlus</h2>
-					</div>
-					<Link to="/">
-						<h2
-							className={
-								props.selected ? "button hide" : "button"
-							}
-							tabIndex={0}
-						>
-							PollBotPlus
-						</h2>
+						<h2 className={"button"}>PollBotPlus</h2>
 					</Link>
 
 					<p>

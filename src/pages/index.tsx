@@ -356,7 +356,7 @@ export default function IndexPage() {
 					</div>
 				</div>
 			</div>
-			<Footer selected="home" />
+			<Footer />
 		</Layout>
 	);
 }
