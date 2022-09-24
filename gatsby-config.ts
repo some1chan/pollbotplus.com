@@ -2,7 +2,9 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
 	siteMetadata: {
-		title: `PollBotPlus`,
+		title: `PollBotPlus | Make Beautiful Polls on Discord.`,
+		description: "Meet PollBotPlus — a Discord poll bot refined for the power user, who cares about how their polls look.",
+		twitterUsername: "@PollBotPlus",
 		siteUrl: `https://pollbotplus.com`,
 	},
 	// More easily incorporate content into your pages through automatic
