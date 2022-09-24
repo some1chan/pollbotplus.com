@@ -37,6 +37,11 @@ export async function sourceNodes({
 
 	createRedirect({
 		fromPath: `/invite`,
+		toPath: `https://discord.com/oauth2/authorize?client_id=804245390642642965&scope=bot&permissions=2416438336`,
+	});
+
+	createRedirect({
+		fromPath: `/support`,
 		toPath: `https://discord.gg/r2YMTMydSF`,
 	});
 }
