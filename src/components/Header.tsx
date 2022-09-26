@@ -71,7 +71,10 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 							</Link>
 						</li>
 						<li className="nav-item">
-							<a href="https://dsc.gg/pollbotplus-support">
+							<a
+								href="https://dsc.gg/pollbotplus-support"
+								target="_blank"
+							>
 								Support Server
 							</a>
 						</li>
