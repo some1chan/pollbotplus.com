@@ -1,5 +1,4 @@
 html.dark footer {
-	--secondary-color: hsl(200, 6%, 30%);
 	--secondary-color-darker: hsl(200, 6%, 45%);
 }
 
@@ -10,10 +9,10 @@ footer {
 	display: flex;
 	font-size: 0.875rem;
 	font-family: Readex Pro, Inter;
-	
+
 	margin-top: auto;
 	padding: 2.25rem 0;
-	
+
 	h2 {
 		font-weight: normal;
 		margin: 0;
