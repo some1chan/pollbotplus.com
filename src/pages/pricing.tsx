@@ -13,9 +13,6 @@ import SEO from "../components/SEO";
 // @ts-ignore
 import * as Pricing from "../styles/Pricing.module.scss";
 
-const INVITE_URL =
-	"https://discord.com/oauth2/authorize?client_id=804245390642642965&scope=bot&permissions=2416438336";
-
 export default function PricingPage() {
 	return (
 		<Layout>
@@ -52,7 +49,7 @@ export default function PricingPage() {
 							<Button
 								type="secondary"
 								label="Add to Server"
-								href={INVITE_URL}
+								href="https://pollbotplus.com/invite"
 								target="_blank"
 							/>
 						</div>

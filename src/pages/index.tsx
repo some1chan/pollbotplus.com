@@ -17,9 +17,6 @@ import { ReactComponent as Lock } from "../images/svg/lock.svg";
 // @ts-ignore
 import * as Landing from "../styles/Landing.module.scss";
 
-const INVITE_URL =
-	"https://discord.com/oauth2/authorize?client_id=804245390642642965&scope=bot&permissions=2416438336";
-
 export default function IndexPage() {
 	const gatsbyRepoData = useStaticQuery(graphql`
 		query {
@@ -46,7 +43,7 @@ export default function IndexPage() {
 								<Button
 									type="primary"
 									label="Add to Server"
-									href={INVITE_URL}
+									href="https://pollbotplus.com/invite"
 									target="_blank"
 								/>
 								<div className={Landing.divider}></div>
