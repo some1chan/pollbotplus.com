@@ -1,8 +1,6 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { getImage, StaticImage } from "gatsby-plugin-image";
-import { convertToBgImage } from "gbimage-bridge";
-import BackgroundImage from "gatsby-background-image";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
@@ -28,21 +26,11 @@ export default function IndexPage() {
 			topgg {
 				serverCount
 			}
-			abstractImage: file(relativePath: { eq: "abstract-light.png" }) {
-				childImageSharp {
-					gatsbyImageData(formats: [AUTO, WEBP, AVIF])
-				}
-			}
 		}
 	`);
-	const image = getImage(gatsbyRepoData.abstractImage);
-
-	// Use like this:
-	const bgImage = convertToBgImage(image);
 
 	return (
 		<Layout>
-			{/* <BackgroundImage {...bgImage} preserveStackingContext> */}
 			<div className={Landing.bgWrapperLanding}>
 				<Header selected="home" />
 				<div className="width-wrapper p-wrapper">

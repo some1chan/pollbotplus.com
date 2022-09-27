@@ -17,22 +17,9 @@ const INVITE_URL =
 	"https://discord.com/oauth2/authorize?client_id=804245390642642965&scope=bot&permissions=2416438336";
 
 export default function PricingPage() {
-	// const gatsbyRepoData = useStaticQuery(graphql`
-	// 	query {
-	// 		abstractImage: file(relativePath: { eq: "abstract-light.png" }) {
-	// 			childImageSharp {
-	// 				gatsbyImageData(formats: [AUTO, WEBP, AVIF])
-	// 			}
-	// 		}
-	// 	}
-	// `);
-	// const image = getImage(gatsbyRepoData.abstractImage);
-	// const bgImage = convertToBgImage(image);
-
 	return (
 		<Layout>
 			<div className={Pricing.bgWrapperLanding}>
-				{/* <BackgroundImage {...bgImage} preserveStackingContext> */}
 				<Header selected="pricing" />
 				<div
 					className={`width-wrapper p-wrapper`}
