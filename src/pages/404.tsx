@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
 				<h1>Page Not Found</h1>
 				<p>
 					Please tell an admin at the{" "}
-					<a href="https://dsc.gg/pollbotplus-support">
+					<a href="https://pollbotplus.com/support">
 						support server
 					</a>{" "}
 					if you somehow come across this unintentionally.

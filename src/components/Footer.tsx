@@ -33,7 +33,7 @@ export default function Footer() {
 				<div className="social-icon-group">
 					<div className="icon baseline">
 						<a
-							href="https://dsc.gg/pollbotplus-support"
+							href="https://pollbotplus.com/support"
 							aria-label="Discord"
 						>
 							<Discord />
