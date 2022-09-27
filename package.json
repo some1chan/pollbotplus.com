@@ -1,6 +1,6 @@
 {
   "name": "pollbotplus.com",
-  "version": "0.1.0-dev.0",
+  "version": "0.1.0",
   "description": "The PollBotPlus website.",
   "private": true,
   "scripts": {
