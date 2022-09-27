@@ -1,6 +1,6 @@
 {
   "name": "pollbotplus.com",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The PollBotPlus website.",
   "private": true,
   "scripts": {
@@ -20,7 +20,6 @@
     "classnames": "^2.3.2",
     "dotenv": "^16.0.2",
     "gatsby": "^4.23.1",
-    "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-image": "^2.23.1",
     "gatsby-plugin-manifest": "^4.23.1",
     "gatsby-plugin-mdx": "^4.2.1",
@@ -32,7 +31,6 @@
     "gatsby-plugin-svgr": "3.0.0-beta.0",
     "gatsby-source-filesystem": "^4.23.0",
     "gatsby-transformer-sharp": "^4.23.1",
-    "gbimage-bridge": "^0.2.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-markdown": "^8.0.3",
