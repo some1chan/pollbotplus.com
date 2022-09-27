@@ -64,7 +64,7 @@ This Service may contain links to other sites. If you click on a third-party lin
 
 We may update this Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
 
-This policy is effective as of 30 August 2022 and was last updated on 30 August 2022. 
+This policy is effective as of 27 September 2022 and was last updated on 27 September 2022. 
 
 ## Contact Us
 
