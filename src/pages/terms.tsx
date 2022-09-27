@@ -38,5 +38,5 @@ export default function TermsOfService() {
 }
 
 export function Head() {
-	return <SEO />;
+	return <SEO title="Terms of Service | PollBotPlus" />;
 }

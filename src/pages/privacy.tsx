@@ -84,5 +84,5 @@ export default function PrivacyPolicy() {
 }
 
 export function Head() {
-	return <SEO />;
+	return <SEO title="Privacy Policy | PollBotPlus" />;
 }

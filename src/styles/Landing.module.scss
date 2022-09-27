@@ -1,5 +1,5 @@
 .bg-wrapper-landing {
-	// background-image: url("../images/abstract-light.png");
+	background-image: url("../images/abstract-light.png");
 	background-size: cover;
 }
 
@@ -9,32 +9,23 @@
 
 .top-landing {
 	padding: 4rem 0 8rem 0;
-	// display: inline-block;
 	display: flex;
 	justify-content: center;
 	align-content: center;
 	min-height: 10rem;
 
-	@media screen and (max-width: 1110px) {
-		// padding: 2rem 0;
-	}
+	flex-direction: column;
+	text-align: center;
+	justify-items: center;
+	align-items: center;
 
-	.text-and-buttons {
-		display: flex;
-		text-align: center;
-		justify-content: center;
-		justify-items: center;
-		align-items: center;
-		// flex-grow: 1;
-
-		p {
-			max-width: 30rem;
-			color: var(--text-color);
-		}
-
-		@media screen and (max-width: 1110px) {
-			// padding: 4rem 0;
-		}
+	p {
+		max-width: 30rem;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+		color: var(--text-color);
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.buttons {
@@ -80,13 +71,6 @@
 			display: inline-flex;
 			max-width: 24rem;
 		}
-	}
-
-	p {
-		margin-left: auto;
-		margin-right: auto;
-		font-size: 1.125rem;
-		line-height: 1.75rem;
 	}
 
 	.vertical-divider {
@@ -218,7 +202,7 @@
 	border-top-color: #f2f3f5;
 
 	border-top-style: solid;
-	border-top-width: 2px;
+	border-top-width: 1px;
 
 	padding-top: 5rem;
 	padding-bottom: 5rem;
@@ -262,7 +246,7 @@
 		flex-basis: 30rem;
 		padding-right: 3rem;
 
-		@media screen and (max-width: 1210px) {
+		@media screen and (max-width: 1023px) {
 			flex-basis: auto;
 			padding-right: 0;
 		}
@@ -275,8 +259,12 @@
 		svg {
 			font-size: 2em;
 			stroke: var(--primary-color);
-			padding-right: 24px;
+			padding-right: 1.5rem;
 			overflow: visible;
+
+			@media screen and (max-width: 525px) {
+				padding-right: 1rem;
+			}
 		}
 
 		li {
@@ -292,12 +280,13 @@
 
 			@media screen and (max-width: 1210px) {
 				width: auto;
+				max-width: 24rem;
 			}
 
 			@media screen and (max-width: 1023px) {
 				font-size: 3rem;
 			}
-			
+
 			@media screen and (max-width: 593px) {
 				max-width: 21rem;
 			}
@@ -309,11 +298,11 @@
 		}
 
 		p {
-			width: 24rem;
+			max-width: 24rem;
 
 			@media screen and (max-width: 1210px) {
 				width: auto;
-				text-align: center;
+				// text-align: center;
 			}
 
 			@media screen and (max-width: 699px) {
@@ -328,8 +317,8 @@
 		.image-container {
 			margin-left: auto;
 
-			@media screen and (max-width: 1210px) {
-				padding-top: 4rem;
+			@media screen and (max-width: 1023px) {
+				padding-top: 3rem;
 				margin: 0 auto;
 			}
 		}
@@ -337,19 +326,23 @@
 		.info {
 			flex-basis: 33rem;
 
-			@media screen and (max-width: 1210px) {
+			@media screen and (max-width: 1023px) {
 				flex-basis: auto;
 			}
 		}
 
 		@media screen and (max-width: 1210px) {
 			align-items: center;
+			// flex-direction: column;
+		}
+
+		@media screen and (max-width: 1023px) {
 			flex-direction: column;
 		}
 	}
 
 	.simplicity {
-		@media screen and (max-width: 1127px) {
+		@media screen and (max-width: 1023px) {
 			flex-direction: column;
 		}
 
@@ -360,13 +353,20 @@
 
 			@media screen and (max-width: 1127px) {
 				align-self: center;
-				text-align: center;
+				text-align: left;
+			}
+
+			@media screen and (max-width: 525px) {
+				text-align: left;
 			}
 
 			.image {
 				@media screen and (max-width: 1127px) {
 					align-self: center;
 					padding-top: 2rem;
+				}
+
+				@media screen and (max-width: 1023px) {
 					text-align: center;
 				}
 			}
@@ -394,6 +394,11 @@
 			display: none;
 			@media screen and (max-width: 1127px) {
 				display: unset;
+				margin-left: auto;
+			}
+
+			@media screen and (max-width: 1023px) {
+				margin-left: 0;
 			}
 		}
 		.uncompressedImage {
@@ -404,14 +409,15 @@
 	}
 
 	.invisibility {
-		@media screen and (max-width: 1210px) {
+		@media screen and (max-width: 1023px) {
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
+			text-align: left;
 		}
 
 		p {
-			@media screen and (max-width: 1210px) {
+			@media screen and (max-width: 1023px) {
 				max-width: 35rem;
 			}
 		}
@@ -421,7 +427,7 @@
 			left: -8px;
 			margin-left: auto;
 
-			@media screen and (max-width: 1210px) {
+			@media screen and (max-width: 1023px) {
 				left: 0;
 				margin: 2rem auto;
 			}

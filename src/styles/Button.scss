@@ -31,6 +31,11 @@
 		}
 	}
 
+	&.primary-disabled {
+		background: var(--primary-color-glass);
+		pointer-events: none;
+	}
+
 	&.secondary {
 		background-color: var(--secondary-button-color);
 

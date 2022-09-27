@@ -1,9 +1,9 @@
 import classNames from "classnames";
-import * as React from "react"
+import * as React from "react";
 // https://www.freecodecamp.org/news/html-button-link-code-examples-how-to-make-html-hyperlinks-using-the-href-attribute-on-tags/
 
 const Button = (props: {
-	type: "primary" | "secondary" | "outline";
+	type: "primary" | "primary-disabled" | "secondary" | "outline";
 	label: string;
 	href?: string;
 	target?: React.HTMLAttributeAnchorTarget;

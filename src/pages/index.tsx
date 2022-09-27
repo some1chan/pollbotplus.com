@@ -42,40 +42,37 @@ export default function IndexPage() {
 
 	return (
 		<Layout>
-			{/* <div className={Landing.bgWrapperLanding}> */}
-			<BackgroundImage {...bgImage} preserveStackingContext>
+			{/* <BackgroundImage {...bgImage} preserveStackingContext> */}
+			<div className={Landing.bgWrapperLanding}>
 				<Header selected="home" />
 				<div className="width-wrapper p-wrapper">
 					<div className={Landing.topLanding}>
-						<div className={Landing.textAndButtons}>
-							<div>
-								<h2>Make Beautiful Polls on Discord.</h2>
-								<p>
-									Meet PollBotPlus, a Discord poll bot refined
-									for the power user, who cares about how
-									their polls look.
-								</p>
-								<div className={Landing.buttons}>
-									<Button
-										type="primary"
-										label="Add to Server"
-										href={INVITE_URL}
-										target="_blank"
-									/>
-									<div className={Landing.divider}></div>
-									<Button
-										type="secondary"
-										label="See Features"
-										href="#features"
-										target="_self"
-									/>
-								</div>
+						<div>
+							<h2>Make Beautiful Polls on Discord.</h2>
+							<p>
+								Meet PollBotPlus, a Discord poll bot refined for
+								the power user, who cares about how their polls
+								look.
+							</p>
+							<div className={Landing.buttons}>
+								<Button
+									type="primary"
+									label="Add to Server"
+									href={INVITE_URL}
+									target="_blank"
+								/>
+								<div className={Landing.divider}></div>
+								<Button
+									type="secondary"
+									label="See Features"
+									href="#features"
+									target="_self"
+								/>
 							</div>
 						</div>
 					</div>
 				</div>
-			</BackgroundImage>
-			{/* </div> */}
+			</div>
 
 			<div
 				className={`${Landing.pollGallery} width-wrapper p-wrapper`}
@@ -86,7 +83,7 @@ export default function IndexPage() {
 						<StaticImage
 							src={"../images/PBP AnimesReal.png"}
 							alt="Poll with the question 'When should we do movie night?' with 7 PM, 8 PM, and 9 PM as options"
-							formats={["png"]}
+							formats={["avif", "png"]}
 							loading="eager"
 							quality={90}
 						/>
@@ -95,7 +92,7 @@ export default function IndexPage() {
 						<StaticImage
 							src={"../images/PBP AnimesReal Dark.png"}
 							alt="Poll with the question 'When should we do movie night?' with 7 PM, 8 PM, and 9 PM as options"
-							formats={["png"]}
+							formats={["avif", "png"]}
 							loading="eager"
 							quality={90}
 						/>
@@ -212,7 +209,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP MovieNight.png"}
 								alt="Poll with the question 'When should we do movie night?' with 7 PM, 8 PM, and 9 PM as options"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								quality={90}
 							/>
 						</div>
@@ -222,7 +219,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP MovieNight Dark.png"}
 								alt="Poll with the question 'When should we do movie night?' with 7 PM, 8 PM, and 9 PM as options"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								quality={90}
 							/>
 						</div>
@@ -240,7 +237,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP Pancakes.png"}
 								alt="Simple poll with the question 'Do you like pancakes?' with a thumbs up, thumbs down, and a shrug reaction"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								objectFit="contain"
 								objectPosition="bottom"
 								quality={90}
@@ -252,7 +249,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP Pancakes Dark.png"}
 								alt="Simple poll with the question 'Do you like pancakes?' with a thumbs up, thumbs down, and a shrug reaction"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								objectFit="contain"
 								objectPosition="bottom"
 								quality={90}
@@ -268,7 +265,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP CatsOrDogs.png"}
 								alt="Simple poll with the question 'Cats or dogs?' with a cat and dog reaction"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								objectPosition="bottom"
 								quality={90}
 							/>
@@ -279,7 +276,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP CatsOrDogs Dark.png"}
 								alt="Simple poll with the question 'Cats or dogs?' with a cat and dog reaction"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								objectPosition="bottom"
 								quality={90}
 							/>
@@ -294,7 +291,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP CatsOrDogs Compressed.png"}
 								alt="Simple poll with the question 'Cats or dogs?' with a cat and dog reaction"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								objectPosition="bottom"
 								quality={90}
 							/>
@@ -307,7 +304,7 @@ export default function IndexPage() {
 									"../images/PBP CatsOrDogs Dark Compressed.png"
 								}
 								alt="Simple poll with the question 'Cats or dogs?' with a cat and dog reaction"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								objectPosition="bottom"
 								quality={90}
 							/>
@@ -337,7 +334,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP Invis.png"}
 								alt="Discord user asking 'What's your favorite fruit?' with various fruits as reactions"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								objectPosition="bottom"
 								quality={90}
 							/>
@@ -348,7 +345,7 @@ export default function IndexPage() {
 							<StaticImage
 								src={"../images/PBP Invis Dark.png"}
 								alt="Discord user asking 'What's your favorite fruit?' with various fruits as reactions"
-								formats={["png"]}
+								formats={["avif", "png"]}
 								objectPosition="bottom"
 								quality={90}
 							/>
