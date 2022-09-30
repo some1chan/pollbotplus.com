@@ -41,6 +41,8 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 		}
 	}
 
+	const isIFrame = window.self !== window.top;
+
 	return (
 		<header className="bg-wrapper">
 			<div className="width-wrapper p-wrapper">
@@ -82,14 +84,16 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 							</a>
 						</li>
 					</ul>
-					<div className="nav-links">
-						<button className="button" onClick={toggleDarkMode}>
-							<Sun />
-							<Moon />
-						</button>
-						{/* <div className="divider" />
+					{isIFrame || (
+						<div className="nav-links">
+							<button className="button" onClick={toggleDarkMode}>
+								<Sun />
+								<Moon />
+							</button>
+							{/* <div className="divider" />
 							<Button type="secondary" label="Dashboard" /> */}
-					</div>
+						</div>
+					)}
 				</div>
 			</div>
 		</header>
