@@ -67,7 +67,7 @@ export default function IndexPage() {
 					<div className={`${Landing.image} ${Landing.lightImage}`}>
 						<StaticImage
 							src={"../images/PBP AnimesReal.png"}
-							alt="Poll with the question 'When should we do movie night?' with 7 PM, 8 PM, and 9 PM as options"
+							alt="Poll with the question 'Anime's Real, Right?' with Real or Not Real as options"
 							formats={["avif", "png"]}
 							loading="eager"
 							quality={90}
@@ -76,7 +76,7 @@ export default function IndexPage() {
 					<div className={`${Landing.image} ${Landing.darkImage}`}>
 						<StaticImage
 							src={"../images/PBP AnimesReal Dark.png"}
-							alt="Poll with the question 'When should we do movie night?' with 7 PM, 8 PM, and 9 PM as options"
+							alt="Poll with the question 'Anime's Real, Right?' with Real or Not Real as options"
 							formats={["avif", "png"]}
 							loading="eager"
 							quality={90}
