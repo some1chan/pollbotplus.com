@@ -7,10 +7,13 @@ import Logo from "./svg/Logo";
 
 export default function Header(props: { selected?: "home" | "pricing" }) {
 	function toggleDarkMode() {
+		const isIFrame = window.self !== window.top;
 		const browserDefaultDark = window.matchMedia(
 			"(prefers-color-scheme: dark)"
 		).matches;
-		const localStorageDark = localStorage.getItem("dark");
+		const localStorageDark = !isIFrame
+			? localStorage.getItem("dark")
+			: false;
 		const defaultsToDark = localStorageDark
 			? localStorageDark == "t"
 			: browserDefaultDark;
@@ -20,19 +23,19 @@ export default function Header(props: { selected?: "home" | "pricing" }) {
 		if (isCurrentlyDarkMode) {
 			if (defaultsToDark) {
 				console.log("Turned to light/default mode");
-				localStorage.removeItem("dark");
+				if (!isIFrame) localStorage.removeItem("dark");
 			} else {
 				console.log("Turned to light mode");
-				localStorage.setItem("dark", "f");
+				if (!isIFrame) localStorage.setItem("dark", "f");
 			}
 			document.documentElement.classList.remove("dark");
 		} else {
 			if (defaultsToDark) {
 				console.log("Turned to dark/default mode");
-				localStorage.removeItem("dark");
+				if (!isIFrame) localStorage.removeItem("dark");
 			} else {
 				localStorage.setItem("dark", "t");
-				console.log("Turned to dark mode");
+				if (!isIFrame) console.log("Turned to dark mode");
 			}
 			document.documentElement.classList.add("dark");
 		}
