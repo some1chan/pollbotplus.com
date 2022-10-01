@@ -1,9 +1,11 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+	flags: { DEV_SSR: true },
 	siteMetadata: {
 		title: `PollBotPlus | Make Beautiful Polls on Discord.`,
-		description: "Meet PollBotPlus — a Discord poll bot refined for the power user, who cares about how their polls look.",
+		description:
+			"Meet PollBotPlus — a Discord poll bot refined for the power user, who cares about how their polls look.",
 		twitterUsername: "@PollBotPlus",
 		siteUrl: `https://pollbotplus.com`,
 	},
