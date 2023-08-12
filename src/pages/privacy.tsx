@@ -70,7 +70,7 @@ This policy is effective as of 27 September 2022 and was last updated on 12 Augu
 
 ## Contact Us
 
-If you have any questions or suggestions about the terms or privacy policy, do not hesitate to join the [Discord support server](https://pollbotplus.com/support), and ask your question in the proper channels or by DMing an admin. Don't send a friend request to the admins, they will likely ignore it!`;`;
+If you have any questions or suggestions about the terms or privacy policy, do not hesitate to join the [Discord support server](https://pollbotplus.com/support), and ask your question in the proper channels or by DMing an admin. Don't send a friend request to the admins, they will likely ignore it!`;
 
 export default function PrivacyPolicy() {
 	return (
