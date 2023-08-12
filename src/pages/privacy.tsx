@@ -27,7 +27,7 @@ The bot collects information including, but not limited to:
 
 The bot also logs the following information in case of, but not limited to, errors, user experience improvements, support tickets, and bot growth analytics:
 
-- **User tags** (ex. Username#0001)
+- **Usernames or tags** (ex. username or Username#0001 respectively)
 - **Guild names and member counts**
 - **Commands ran** (ex. context menus, slash commands, message commands, buttons, select menus, etc.) ran by a user, including but not limited to:
 	- The questions and choices used
@@ -52,6 +52,8 @@ We may employ third-party companies and individuals due to the following reasons
 
 We want to inform users of this Service that these third parties have access to their Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
 
+- [Sentry](https://sentry.io)
+
 ## Security
 
 We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
@@ -64,12 +66,11 @@ This Service may contain links to other sites. If you click on a third-party lin
 
 We may update this Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
 
-This policy is effective as of 27 September 2022 and was last updated on 27 September 2022. 
+This policy is effective as of 27 September 2022 and was last updated on 12 August 2023. 
 
 ## Contact Us
 
-If you have any questions or suggestions about the privacy policy, do not hesitate to join the [Discord support server](https://pollbotplus.com/support), and message me at some1chan#0035. Please don't send me a friend request, I will likely ignore it!
-`;
+If you have any questions or suggestions about the terms or privacy policy, do not hesitate to join the [Discord support server](https://pollbotplus.com/support), and ask your question in the proper channels or by DMing an admin. Don't send a friend request to the admins, they will likely ignore it!`;`;
 
 export default function PrivacyPolicy() {
 	return (
